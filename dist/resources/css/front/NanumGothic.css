@@ -1,0 +1,17 @@
+@charset "utf-8";
+/* NanumGothic Webfont */
+@font-face{
+	font-family: 'ng';
+	font-style: normal;
+	font-weight: normal;
+	src: url('../../webfont/NanumGothic.eot') format('woff');
+	src: url('../../webfont/NanumGothic.eot?#iefix') format('embedded-opentype'), url('../../webfont/NanumGothic.woff') format('woff'), url('../../webfont/NanumGothic.ttf') format('truetype');
+}
+
+@font-face{
+	font-family: 'ngb';
+	font-style: normal;
+	font-weight: bold;
+	src: url('../../webfont/NanumGothicBold.eot');
+	src: url('../../webfont/NanumGothicBold.eot?#iefix') format('embedded-opentype'), url('../../webfont/NanumGothicBold.woff') format('woff'), url('../../webfont/NanumGothicBold.ttf') format('truetype');
+}

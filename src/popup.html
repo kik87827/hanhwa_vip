@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+	@@include('./include/head.html')
+	<body class="front-body">
+		<!-- markup -->
+		<div class="page-wrap">
+			<button type="button" class="btn_guide" id="btn_callLayer">레이어 호출</button>
+			<script>
+				$(function(){
+					$("#btn_callLayer").on("click",function(){
+						dimLayerShow({
+							target: "#popup_templete"
+						});
+					});
+					dimLayerShow({
+						target: "#popup_templete"
+					});
+				});
+			</script>
+			<!-- 레이어팝업 -->
+			<div class="dimlayer_z fulltype" id="popup_templete">
+				<div class="fullpop_dim"></div>
+				<div class="fullpop_item">
+					<div class="fullpop_titlow">
+						<h4 class="fullpop_title">2023년 한화생명 VIP 검진권</h4>
+					</div>
+					<div class="fullpop_contlow">
+						<div class="fullpop_contlow_in">
+							<div class="result_item_group">
+								<p class="result_item_guide">2023년 VIP Members<br>Black I 고객님으로 선정되셨습니다.</p>
+								<div class="result_item_data_row">
+									<table class="design_data_tb">
+										<tbody>
+											<tr>
+												<th><span class="data_tbody_th">VIP 번호</span></th>
+												<td><p class="data_td_text">117000001</p></td>
+											</tr>
+											<tr>
+												<th><span class="data_tbody_th">VIP 검진번호</span></th>
+												<td><p class="data_td_text">117000001117000001</p></td>
+											</tr>
+											<tr>
+												<th><span class="data_tbody_th">고객명</span></th>
+												<td><p class="data_td_text">김소연</p></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="textbanner_group"><a href="#" class="btn_textbanner"><span class="textbanner_in">검진센터 및 제휴병원<br>확인하기</span></a></div>
+							<div class="btn_popsubmit_zone">
+								<div class="btn_popsubmit_wrap">
+									<a href="#" class="btn_popsubmit primary"><span class="popsubmit_in">건강검진권 인쇄</span></a>
+									<a href="#" class="btn_popsubmit closetrigger"><span class="popsubmit_in">닫기</span></a> <!-- closetrigger 닫기 -->
+								</div>
+							</div>
+						</div>
+					</div>
+					<button type="button" class="btn_layerclose"></button>
+				</div>
+			</div>
+			<!-- // 레이어팝업 -->
+		</div>
+	</body>
+</html>

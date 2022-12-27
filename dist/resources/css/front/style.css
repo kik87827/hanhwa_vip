@@ -1,0 +1,101 @@
+.flew_w{overflow:hidden;position:relative;width:0;height:0;}
+.flew_w:after{display:block;content:'';clear:both;}
+.flew_w.show{overflow:visible;width:auto;height:auto;}
+.flew_z{position:relative;width:1000px;margin:0 auto;}
+
+
+
+
+
+.nbs-flexisel-container {
+    position:relative;
+    width:1000px;
+	margin:0 auto;
+}
+.nbs-flexisel-container{}
+.nbs-flexisel-ul {
+    position:relative;
+    width:99999px;
+    margin:0px;
+    padding:0px;
+    list-style-type:none;   
+    text-align:center;  
+}
+
+.nbs-flexisel-inner {
+    position: relative;
+    overflow: hidden;
+    float:left;
+    width:100%;
+}
+
+.nbs-flexisel-item {
+    float:left;
+    margin:0px;
+    padding:0px;
+    cursor:pointer;
+    position:relative;
+    line-height:0px;
+}
+.nbs-flexisel-item img {
+    max-width: 100%;
+    cursor: pointer;
+    position: relative;
+}
+
+/*** Navigation ***/
+
+.nbs-flexisel-nav-left,
+.nbs-flexisel-nav-right {
+    display:inline-block;width:17px;height:36px;position: absolute; top:50%;margin-top:-18px; cursor:pointer;
+}
+
+.nbs-flexisel-nav-left {
+   left:-37px;
+}
+
+.nbs-flexisel-nav-left:before {
+    content: "<";
+	font-size:36px;color:#c7b6ac;font-family: 'ngb';line-height:36px;
+}
+
+.nbs-flexisel-nav-left.disabled {
+    opacity: 0.4;
+}
+
+.nbs-flexisel-nav-right {
+    right:-37px;   
+}
+
+.nbs-flexisel-nav-right:before {
+    content: ">";
+	font-size:36px;color:#c7b6ac;font-family: 'ngb';line-height:36px;
+}
+
+.nbs-flexisel-nav-right.disabled {
+    opacity: 0.4;
+}
+
+.thum-item{display:block;position:relative;line-height:0;font-size:0;width:320px;margin:0 auto;text-align:left;}
+.thum-item .thum{width:320px;}
+.thum-item .text-lay{position:absolute;bottom:0;left:0;width:100%;box-sizing:border-box;background-color:rgba(0,0,0,.7);padding:15px;display:block;}
+.thum-item .text-lay .intxt{font-size:14px;line-height:18px;color:#fff;width:99%;font-family: 'ngb';display:inline-block;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+
+@media (max-width: 1000px) {
+	.nbs-flexisel-container {
+		position:relative;
+		width:auto;
+		margin:0 auto;
+	}
+	.flew_z{position:relative;width:auto;margin:0 auto;}
+	.nbs-flexisel-nav-left {
+	   left:0;
+	}
+
+
+	.nbs-flexisel-nav-right {
+		right:0;   
+	}
+	.thum-item{text-align:left;}
+	.thum-item .thum{margin:0 auto;}
+} 

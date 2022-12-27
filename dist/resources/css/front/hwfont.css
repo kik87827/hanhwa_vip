@@ -1,0 +1,17 @@
+@charset "utf-8";
+/* NanumGothic Webfont */
+@font-face{
+	font-family: 'ng';
+	font-style: normal;
+	font-weight: normal;
+	src: url('../../webfont_hw/LIFEPLUS Medium.ttf') format('truetype');
+	src: url('../../webfont_hw/LIFEPLUS Medium.ttf') format('truetype');
+}
+
+@font-face{
+	font-family: 'ngb';
+	font-style: normal;
+	font-weight: bold;
+	src: url('../../webfont_hw/LIFEPLUS Bold.ttf') format('truetype');
+	src: url('../../webfont/LIFEPLUS Bold.ttf') format('truetype');
+}
