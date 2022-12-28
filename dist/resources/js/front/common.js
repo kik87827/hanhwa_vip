@@ -1056,7 +1056,7 @@ function detailSwiper(){
 }
 
 var detailSwiperObj = null;
-function detailSwiper(){
+function detailPageSwiper(){
 	const detail_thum = document.querySelectorAll(".detail_thum");
 	detailSwiperObj = new Swiper(".detail_swiper",{
 		speed : 800,

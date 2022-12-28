@@ -270,17 +270,19 @@
 
 
 			$(function() {
+				detailSwiper();
 				$("[name='detail_view']").on("click", (e) => {
 					e.preventDefault();
 					dimLayerShow({
 						target: "#popup_product",
 						openCallback() {
+
 							tailSwiperObj.update();
 						}
 					});
 
 				});
-				detailSwiper();
+
 
 				if (url_2 === "popup") {
 					dimLayerShow({
