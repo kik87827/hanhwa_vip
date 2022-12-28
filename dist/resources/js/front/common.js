@@ -1054,4 +1054,23 @@ function detailSwiper(){
 		});
 	})
 }
+
+var detailSwiperObj = null;
+function detailSwiper(){
+	const detail_thum = document.querySelectorAll(".detail_thum");
+	detailSwiperObj = new Swiper(".detail_swiper",{
+		speed : 800,
+		navigation : {
+			nextEl : '.detail_swiper_wrap .next_navi', // 다음 버튼 클래스명
+			prevEl : '.detail_swiper_wrap .prev_navi', // 이번 버튼 클래스명
+		}
+	});
+
+	detail_thum.forEach((element,index)=>{
+		element.addEventListener("click",(e)=>{
+			e.preventDefault();
+			detailSwiperObj.slideTo(index);
+		});
+	});
+}
 /* // 2022 */
