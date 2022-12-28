@@ -1560,6 +1560,8 @@ li.nodata_li{}
 .tail_guide_copy_sub{}
 .tail_img_wrap{}
 .tail_img_wrap > img{}
+.tail_img_w{}
+.tail_img_w > img{}
 .tail_data_spec_wrap{}
 .data_tail_tb{}
 .data_tail_tb th,
@@ -1568,8 +1570,21 @@ li.nodata_li{}
 .data_tail_tb tr:last-of-type td{}
 .data_tail_tb th{}
 .data_tail_tb td{}
+
+
+.data_tail_tb.type2{}
+.data_tail_tb.type2 th,
+.data_tail_tb.type2 td{}
+.data_tail_tb.type2 tr:last-of-type th,
+.data_tail_tb.type2 tr:last-of-type td{}
+.data_tail_tb.type2 th{}
+.data_tail_tb.type2 td{}
+
+
+
 .data_tail_thtext{}
 .data_tail_tdtext{}
+.indent_list_wrap{}
 .indent_item_list{}
 .indent_item_list > li{}
 .indent_item_list > li:last-of-type{}
@@ -1586,9 +1601,33 @@ li.nodata_li{}
 .indent_item_list.import_list > li:before{}
 .indent_item_list.import_list .indent_bullet{}
 .indent_item_list.import_list .indent_item{}
+.indent_item_list.size_type2{}
+.indent_item_list.size_type2 > li{}
+.indent_item_list.size_type2 > li:last-of-type{}
+.indent_item_list.size_type2 > li:before{}
+.indent_item_list.size_type2 .indent_bullet{}
+.indent_item_list.size_type2 .indent_item{}
+.indent_item_list.size_type3{}
+.indent_item_list.size_type3 > li{}
+.indent_item_list.size_type3 > li:last-of-type{}
+.indent_item_list.size_type3 > li:before{}
+.indent_item_list.size_type3 .indent_bullet{}
+.indent_item_list.size_type3 .indent_item{}
+.indent_item_list.size_type4{}
+.indent_item_list.size_type4 > li{}
+.indent_item_list.size_type4 > li:last-of-type{}
+.indent_item_list.size_type4 > li:before{}
+.indent_item_list.size_type4 .indent_bullet{}
+.indent_item_list.size_type4 .indent_item{}
 .indent_bullet{}
 .indent_item{}
 .only_indent_para{}
+.only_indent_para.type2{}
+.only_indent_para.type2 .only_indent_bullet{}
+.only_indent_para.type2 .only_indent_text{}
+.only_indent_para.size_xsm{}
+.only_indent_para.size_xsm .only_indent_bullet{}
+.only_indent_para.size_xsm .only_indent_text{}
 .only_indent_bullet{}
 .only_indent_text{}
 .indent_item_list + .only_indent_para{}
@@ -1608,7 +1647,13 @@ li.nodata_li{}
 .btn_box.primary{}
 .btn_box.primary .btn_box_in{}
 
+.tail_vitem_zone{}
+.tail_vitem_zone > .tail_vitem_wrap{}
 .tail_vitem_wrap{}
+.tail_vitem_wrap.emp{}
+.tail_vitem_wrap.emp .tail_vitem{}
+.tail_vitem_wrap.type2{}
+.tail_vitem_wrap.type2 .tail_vitem{}
 .tail_vitem{}
 .tail_vitem.emp{}
 .tail_vitem.emp:before{}
@@ -1642,6 +1687,7 @@ li.nodata_li{}
 .boxstep_csub{}
 
 .boxstep_list_wrap + .import_list{}
+.boxstep_list_wrap + .only_indent_para{}
 
 .tail_data_spec_wrap.vc_initem{}
 
@@ -1656,6 +1702,139 @@ li.nodata_li{}
 .hor_thtext{}
 .hor_tdtext{}
 
+.short_10{width:10%;}
+.short_20{width:20%;}
+.short_30{width:30%;}
+.short_40{width:40%;}
+.short_50{width:50%;}
+.short_60{width:60%;}
+.short_70{width:70%;}
+.short_80{width:80%;}
+
+.text_emp{}
+.text_emp *{}
+
+.org_emp{}
+.org_emp *{}
+
+.guide_vcont{}
+.guide_vcont:last-of-type{}
+
+.guide_indent_item{}
+.guide_indent_bullet{}
+.guide_indent_cont{}
+.guide_indent_main{}
+.guide_indent_sub{}
+.guide_img_item_group{}
+.guide_img_item_group + .indent_item_list{}
+.guide_img_item{}
+.guide_img_item > img{}
+.res45{}
+
+.detail_summary_both{}
+.detail_summary_img_cols{}
+.detail_summary_spec_cols{}
+.detail_swiper_zone{}
+.detail_swiper_wrap{}
+.btn_swiper_detail{}
+.btn_swiper_detail.prev_navi{}
+.btn_swiper_detail.next_navi{}
+.swiper-container.detail_swiper{}
+.swiper-container.detail_swiper .swiper-wrapper{}
+.swiper-container.detail_swiper .swiper-slide{}
+.swiper-container.detail_swiper .swiper-slide img{}
+
+.detail_thum_list_wrap{}
+.detail_thum_list{}
+.detail_thum_list > li{}
+.detail_thum_list > li:last-of-type{}
+.detail_thum{}
+.detail_thum > img{}
+
+.detail_summary_spec_group{}
+.detail_summary_spec{}
+.detail_summary_spec:last-of-type{}
+
+.detail_option_tb{}
+.detail_option_tr{}
+.detail_option_tr:last-of-type{}
+.detail_option_tr:last-of-type .detail_option_th{}
+.detail_option_tr:last-of-type .detail_option_td{}
+.detail_option_th{}
+.detail_option_td{}
+.detail_option_key{}
+.detail_option_value{}
+
+.emp_box{}
+.box_in_sigcopy{}
+.box_in_subcopy{}
+
+.dep_vitem{}
+.dep_vitem:last-of-type{}
+
+.dep_vtitle{}
+.dep_vcont{}
+.dep_vcont .indent_item_list{}
+
+.vcmain_copy{}
+.vcimg_group{}
+.vcimg_group > li{}
+.vcimg_group > li img{}
+
+.tail_summary_both{}
+.tail_summary_img_cols{}
+.tail_summary_img_cols img{}
+.tail_summary_spec_cols{}
+.tail_summary_spec{}
+
+.vform_item_wrap{}
+.vform_item_wrap + .btn_popsubmit_zone{}
+.vform_item{}
+.vform_item:last-of-type{}
+.vform_title{}
+.vform_content{}
+.flex_form_list_wrap{}
+.flex_form_list_wrap + .indent_item_list{}
+.flex_form_list{}
+.flex_form_list > li{}
+.flex_form_list > li:last-of-type{}
+select.combo_form{}
+
+.infobox_item_wrap{}
+.infobox_item{}
+.infobox_item:last-of-type{}
+.infobox_title{}
+.infobox_content{}
+.infobox_content .indent_item_list{}
+.infobox_para{}
+
+.data_board_zone{}
+.data_sort_form_row{}
+.data_sort_form{}
+.data_sort_form > li{}
+.data_sort_form > li:last-of-type{}
+select.form_select{}
+input.form_input{}
+.btn_formsubmit{}
+.data_toggle_item_zone{}
+.data_toggle_item{}
+.data_toggle_item:last-of-type{}
+.data_toggle_category{}
+.data_toggle_obj_group{}
+.data_toggle_obj{}
+.data_toggle_obj:after{}
+.data_toggle_target{}
+.indent_emp_bullet{}
+.indent_emp_maintext{}
+.data_toggle_cont{}
+.data_toggle_cont .data_toggle_cont{}
+.data_toggle_cont .only_indent_para{}
+.data_toggle_para{}
+.data_toggle_para + .only_indent_para{}
+
+@media (max-width:1023px){
+	.res45{}
+}
 
 /* popup */
 .btn_guide{display:inline-block;font-size:16px;padding:15px 30px;border:1px solid #ddd;}
