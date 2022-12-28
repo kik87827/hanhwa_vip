@@ -1013,4 +1013,45 @@ function dimLayerHide(option){
 		}
 	});
 }
+
+function maxHeight(item){
+	const itemObj = document.querySelectorAll(item);
+	let maxArray = [];
+
+	window.addEventListener("resize",()=>{
+		heightFunc();
+	});
+	heightFunc();
+
+	function heightFunc(){
+		if(itemObj.length){
+			itemObj.forEach((element,index)=>{
+				element.style.removeProperty("height");
+				maxArray.push(element.getBoundingClientRect().height);
+			});
+			itemObj.forEach((element,index)=>{
+				element.setAttribute("style",`height:${Math.max.apply(null,maxArray)}px`);
+			});
+		}
+	}
+}
+
+var tailSwiperObj = null;
+function detailSwiper(){
+	const tail_thum = document.querySelectorAll(".tail_thum");
+	tailSwiperObj = new Swiper(".tail_swiper",{
+		speed : 800,
+		navigation : {
+			nextEl : '.tail_swiper_wrap .next_navi', // 다음 버튼 클래스명
+			prevEl : '.tail_swiper_wrap .prev_navi', // 이번 버튼 클래스명
+		}
+	});
+
+	tail_thum.forEach((element,index)=>{
+		element.addEventListener("click",(e)=>{
+			e.preventDefault();
+			tailSwiperObj.slideTo(index);
+		});
+	})
+}
 /* // 2022 */

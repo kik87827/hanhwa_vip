@@ -33,8 +33,12 @@
 											<div class="product_spec has_tail">
 												<p class="product_main_name">명품 1++ 한우 구이</p>
 												<div class="btn_specsubmit_wrap">
-													<a href="#" class="btn_specsubmit"><span class="specsubmit_in">자세히보기</span></a>
-													<a href="#" class="btn_specsubmit primary"><span class="specsubmit_in">신청하기</span></a>
+													<div class="btn_specsubmit_cols">
+														<a href="#" class="btn_specsubmit" name="detail_view"><span class="specsubmit_in">자세히보기</span></a>
+													</div>
+													<div class="btn_specsubmit_cols">
+														<a href="#" class="btn_specsubmit primary"><span class="specsubmit_in">신청하기</span></a>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -50,8 +54,12 @@
 											<div class="product_spec has_tail">
 												<p class="product_main_name">프리미엄 수산물세트</p>
 												<div class="btn_specsubmit_wrap">
-													<a href="#" class="btn_specsubmit"><span class="specsubmit_in">자세히보기</span></a>
-													<a href="#" class="btn_specsubmit primary"><span class="specsubmit_in">신청하기</span></a>
+													<div class="btn_specsubmit_cols">
+														<a href="#" class="btn_specsubmit" name="detail_view"><span class="specsubmit_in">자세히보기</span></a>
+													</div>
+													<div class="btn_specsubmit_cols">
+														<a href="#" class="btn_specsubmit primary"><span class="specsubmit_in">신청하기</span></a>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -67,8 +75,12 @@
 											<div class="product_spec has_tail">
 												<p class="product_main_name">프리미엄 마누카 꿀 세트</p>
 												<div class="btn_specsubmit_wrap">
-													<a href="#" class="btn_specsubmit"><span class="specsubmit_in">자세히보기</span></a>
-													<a href="#" class="btn_specsubmit primary"><span class="specsubmit_in">신청하기</span></a>
+													<div class="btn_specsubmit_cols">
+														<a href="#" class="btn_specsubmit" name="detail_view"><span class="specsubmit_in">자세히보기</span></a>
+													</div>
+													<div class="btn_specsubmit_cols">
+														<a href="#" class="btn_specsubmit primary"><span class="specsubmit_in">신청하기</span></a>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -84,8 +96,12 @@
 											<div class="product_spec has_tail">
 												<p class="product_main_name">프리미엄 제철 과일 정기배송 3회</p>
 												<div class="btn_specsubmit_wrap">
-													<a href="#" class="btn_specsubmit"><span class="specsubmit_in">자세히보기</span></a>
-													<a href="#" class="btn_specsubmit primary"><span class="specsubmit_in">신청하기</span></a>
+													<div class="btn_specsubmit_cols">
+														<a href="#" class="btn_specsubmit" name="detail_view"><span class="specsubmit_in">자세히보기</span></a>
+													</div>
+													<div class="btn_specsubmit_cols">
+														<a href="#" class="btn_specsubmit primary"><span class="specsubmit_in">신청하기</span></a>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -101,20 +117,180 @@
 											<div class="product_spec has_tail">
 												<p class="product_main_name">기부</p>
 												<div class="btn_specsubmit_wrap">
-													<a href="#" class="btn_specsubmit"><span class="specsubmit_in">자세히보기</span></a>
-													<a href="#" class="btn_specsubmit primary"><span class="specsubmit_in">신청하기</span></a>
+													<div class="btn_specsubmit_cols">
+														<a href="#" class="btn_specsubmit" name="detail_view"><span class="specsubmit_in">자세히보기</span></a>
+													</div>
+													<div class="btn_specsubmit_cols">
+														<a href="#" class="btn_specsubmit primary"><span class="specsubmit_in">신청하기</span></a>
+													</div>
 												</div>
 											</div>
 										</div>
 									</div>
 								</li>
-								<li class="nodata_li"><p class="nodata_para">데이터가 없습니다.</p></li>
+								<!-- <li class="nodata_li"><p class="nodata_para">데이터가 없습니다.</p></li> -->
 							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
+			<script>
+				// 코딩리스트 퍼블리싱 확인용(개발시 삭제하셔도 됨)
+				let url = window.location.href.split('?')[1];
+				let url_2 = url !== undefined ? url.split('#')[0] : null;
+
+				
+
+				$(function(){
+					$("[name='detail_view']").on("click",(e)=>{
+						e.preventDefault();
+						dimLayerShow({
+							target: "#popup_product",
+							openCallback(){
+								tailSwiperObj.update();
+							}
+						});
+						
+					});
+					detailSwiper();
+
+					if(url_2 === "popup"){
+						dimLayerShow({
+							target: "#popup_product",
+							openCallback(){
+								tailSwiperObj.update();
+							}
+						});
+						// 닫기
+						// dimLayerHide({
+						// 	target: "#main_popup"
+						// });
+					}
+				});
+
+				window.addEventListener("load",()=>{
+					maxHeight(".product_main_name");
+					
+				})
+			</script>
 			@@include('./include/footer.html')
+			<!-- 레이어팝업 -->
+			<div class="dimlayer_z fulltype" id="popup_product">
+				<div class="fullpop_dim"></div>
+				<div class="fullpop_item type2">
+					<div class="fullpop_titlow">
+						<h4 class="fullpop_title">명품 1++ 한우구이 </h4>
+					</div>
+					<div class="fullpop_contlow">
+						<div class="fullpop_contlow_in">
+							<div class="tail_swiper_zone">
+								<div class="tail_swiper_wrap">
+									<a href="#" class="btn_swiper_navi prev_navi"></a>
+									<div class="swiper-container tail_swiper">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide"><img src="/resources/image/front/temp/big_thum_01_2022.png" alt=""></div>
+											<div class="swiper-slide"><img src="/resources/image/front/temp/big_thum_02_2022.png" alt=""></div>
+											<div class="swiper-slide"><img src="/resources/image/front/temp/big_thum_03_2022.png" alt=""></div>
+											<div class="swiper-slide"><img src="/resources/image/front/temp/big_thum_04_2022.png" alt=""></div>
+											<div class="swiper-slide"><img src="/resources/image/front/temp/big_thum_05_2022.png" alt=""></div>
+										</div>
+									</div>
+									<a href="#" class="btn_swiper_navi next_navi"></a>
+								</div>
+								<div class="tail_thum_list_wrap">
+									<ul class="tail_thum_list">
+										<li><a href="#" class="tail_thum"><img src="/resources/image/front/temp/sm_thum_01_2022.png" alt=""></a></li>
+										<li><a href="#" class="tail_thum"><img src="/resources/image/front/temp/sm_thum_02_2022.png" alt=""></a></li>
+										<li><a href="#" class="tail_thum"><img src="/resources/image/front/temp/sm_thum_03_2022.png" alt=""></a></li>
+										<li><a href="#" class="tail_thum"><img src="/resources/image/front/temp/sm_thum_04_2022.png" alt=""></a></li>
+										<li><a href="#" class="tail_thum"></a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="tail_guide_zone">
+								<div class="tail_guide_copy_group">
+									<p class="tail_guide_copy_main">가장 귀한 고객님을 위해 엄선한 <br>프리미엄 한우 명품 구이 1++ 세트</p>
+									<p class="tail_guide_copy_sub">
+										‘자연이 품은 종합영양제’라고도 불릴 정도로 9가지 필수 아미노산이 
+										함유된 국산 한우 중 1++등급 한우만을 엄선하여 준비하였습니다.<br>
+										일반 한우보다 육향이 풍부하고 식감이 부드럽습니다.  
+									</p>
+								</div>
+								<div class="tail_img_wrap">
+									<img src="/resources/image/front/temp/tail_img_2022.png" alt="">
+								</div>
+								<div class="tail_data_spec_wrap">
+									<table class="data_tail_tb">
+										<tr>
+											<th><span class="data_tail_thtext">구성</span></th>
+											<td>
+												<div class="data_tail_tdtext">
+													한우 등심 냉장 450g x 2개<br>
+													한우 채끝 냉장 450g x 2개<br>
+													한우 특수부위(업진,부채,살치,등 랜덤) 냉장 450g x 2개 
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th><span class="data_tail_thtext">중량</span></th>
+											<td><div class="data_tail_tdtext">총 2.7kg</div></td>
+										</tr>
+										<tr>
+											<th><span class="data_tail_thtext">등급</span></th>
+											<td><div class="data_tail_tdtext">1++등급</div></td>
+										</tr>
+										<tr>
+											<th><span class="data_tail_thtext">원산지</span></th>
+											<td><div class="data_tail_tdtext">국내산 한우</div></td>
+										</tr>
+										<tr>
+											<th><span class="data_tail_thtext">보관방법</span></th>
+											<td>
+												<div class="data_tail_tdtext">
+													<ul class="indent_item_list">
+														<li>
+															<span class="indent_bullet">-</span>
+															<div class="indent_item">신선식품으로 바로 드시거나 냉동실에 보관해주세요.</div>
+														</li>
+														<li>
+															<span class="indent_bullet">-</span>
+															<div class="indent_item">급격한 온도 변화를 주는 해동 방법은 육질에 좋지 않습니다.</div>
+														</li>
+														<li>
+															<span class="indent_bullet">-</span>
+															<div class="indent_item">드시기 하루 전 냉장실에 천천히 해동하시면 고기가 숙성되어 맛있게 드실 수 있습니다.</div>
+														</li>
+													</ul>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th><span class="data_tail_thtext">배송</span></th>
+											<td>
+												<div class="data_tail_tdtext">
+													신선한 상품 배송을 위하여 한우는 배송 전 해피콜을 진행하며, <br>해피콜이 완료된 경우에만 배송(해피콜 발신 번호: 02. 525. 9466)
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th><span class="data_tail_thtext">유의사항</span></th>
+											<td>
+												<div class="data_tail_tdtext">
+													신선도 유지와 육즙을 보존하여 맛과 풍미를 지키는 스킨포장 방식으로 
+													산소차단으로 인한 갈변현상은 스킨포장을 벗기면 15~30분 내로 
+													다시 붉은색을 띠게 됩니다.
+												</div>
+											</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+					<button type="button" class="btn_layerclose"></button>
+				</div>
+			</div>
+			<!-- // 레이어팝업 -->
 		</div>
 	</body>
 </html>
