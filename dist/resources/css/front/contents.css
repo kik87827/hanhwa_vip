@@ -1926,7 +1926,7 @@ li.nodata_li .nodata_para{}
 .tail_summary_img_cols{}
 .tail_summary_img_cols img{}
 .tail_summary_spec_cols{margin-left:30px;}
-.tail_summary_spec{font-size:26px;color:#34302f;font-family:'ngb';line-height:1.5;}
+.tail_summary_spec{font-size:26px;color:#34302f;font-family:'ngb';line-height:1.5;letter-spacing: -1px;}
 
 .vform_item_wrap{}
 .vform_item_wrap + .btn_popsubmit_zone{}
@@ -1988,6 +1988,7 @@ input.form_input{}
 
 .res40{margin-top:40px !important;}
 .res20{margin-top:20px !important;}
+.res10{margin-top:10px !important;}
 @media (max-width:1023px){
 	.res45{}
 	.res40{margin-top:20px !important;}
