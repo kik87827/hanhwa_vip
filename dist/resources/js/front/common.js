@@ -1073,4 +1073,16 @@ function detailPageSwiper(){
 		});
 	});
 }
+
+function toggleFunc(){
+	let data_toggle_target = document.querySelectorAll(".data_toggle_target");
+	data_toggle_target.forEach((element,index)=>{
+		element.addEventListener("click",(e)=>{
+			let thisEventObj = e.currentTarget;
+			let thisEventParentObj = thisEventObj.closest(".data_toggle_obj");
+			e.preventDefault();
+			thisEventParentObj.classList.toggle("active");
+		});
+	});
+}
 /* // 2022 */
