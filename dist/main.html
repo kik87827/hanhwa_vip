@@ -145,7 +145,17 @@
 			<div class="main_contents_zone">
 				<div class="mc_01_row">
 					<div class="mc_pixin">
+						<!-- 230102 수정 -->
 						<div class="mc_box_fxwrap">
+							<a href="#" class="mc_box bg_01">
+								<div class="mc_box_copy_group">
+									<p class="mc_box_sig_copy">감사서비스</p>
+									<ul class="mc_box_sub_list">
+										<li>감사선물</li>
+										<li>기념일선물</li>
+									</ul>
+								</div>
+							</a>
 							<a href="#" class="mc_box bg_02">
 								<div class="mc_box_copy_group">
 									<p class="mc_box_sig_copy">기본서비스</p>
@@ -166,6 +176,7 @@
 								</div>
 							</a>
 						</div>
+						<!-- // 230102 수정 -->
 					</div>
 				</div>
 				<div class="mc_02_row">
@@ -293,7 +304,9 @@
 						<div class="btn_popsubmit_zone">
 							<div class="btn_popsubmit_wrap">
 								<a href="#" class="btn_popsubmit primary"><span class="popsubmit_in">건강검진권 인쇄</span></a>
-								<a href="#" class="btn_popsubmit closetrigger"><span class="popsubmit_in">닫기</span></a> <!-- closetrigger 닫기 -->
+								<!-- 230102 수정 -->
+								<a href="#" class="btn_popsubmit closetrigger cookie_close"><span class="popsubmit_in">닫기</span></a> <!-- closetrigger 닫기 -->
+								<!-- // 230102 수정 -->
 							</div>
 						</div>
 					</div>
@@ -307,15 +320,44 @@
 			let url = window.location.href.split('?')[1];
 			let url_2 = url !== undefined ? url.split('#')[0] : null;
 
-			if (url_2 === "popup") {
-				dimLayerShow({
-					target: "#main_popup"
+
+
+			/* 230102 수정/추가 */
+			document.querySelectorAll(".cookie_close").forEach((element) => {
+				element.addEventListener("click", (e) => {
+					e.preventDefault();
+					setCookie("today", "true", 1);
 				});
+			});
+
+			var setCookie = function(name, value, exp) {
+				var date = new Date();
+				date.setTime(date.getTime() + exp * 24 * 60 * 60 * 1000);
+				document.cookie = name + '=' + value + ';expires=' + date.toUTCString() + ';path=/';
+			};
+			var getCookie = function(name) {
+				var value = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+				return value ? value[2] : null;
+			};
+			var deleteCookie = function(name) {
+				document.cookie = name + '=; expires=Thu, 01 Jan 1999 00:00:10 GMT;';
+			}
+
+			var is_today = getCookie("today");
+
+			if (url_2 === "popup") {
+				if (is_today === null) {
+					dimLayerShow({
+						target: "#main_popup"
+					});
+				}
 				// 닫기
 				// dimLayerHide({
 				// 	target: "#main_popup"
 				// });
 			}
+
+			/* // 230102 수정/추가 */
 		</script>
 		<div class="footer-wrap">
 			<div class="fix-wrap">
