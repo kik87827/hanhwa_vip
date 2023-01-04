@@ -1707,7 +1707,8 @@ li.nodata_li .nodata_para{}
 .indent_list_wrap{}
 .indent_item_list.ftype2{font-size:16px;}
 .indent_item_list{}
-.indent_item_list > li{display:flex;}
+.indent_item_list *{word-break: break-all;}
+.indent_item_list > li{display:flex;word-break: break-all;}
 .indent_item_list.has_lim5{}
 .indent_item_list.has_lim5 > li{margin-bottom:5px;}
 .indent_item_list > li:last-of-type{margin-bottom:0 !important;}
@@ -1743,6 +1744,7 @@ li.nodata_li .nodata_para{}
 .indent_item_list.size_type4 > li:before{}
 .indent_item_list.size_type4 .indent_bullet{}
 .indent_item_list.size_type4 .indent_item{}
+.indent_item_list .down_text{font-size:20px;}
 .indent_bullet{flex:0;white-space: nowrap;margin-right:5px;}
 .indent_item{flex:1;min-width:0;word-break: break-all;}
 .only_indent_para{font-size:20px;color:#34302f;display:flex;}
@@ -1996,7 +1998,7 @@ input.input_form{font-size:14px;height:40px;padding: 0 15px;font-family: 'ng';ba
 .infobox_title{margin-bottom:18px;font-size:32px;color:#f37321;line-height:1;font-family:'ngb';}
 .infobox_content{background:#f5f3f0;padding:20px;border-top:4px solid #f37321;font-size:24px;color:#34302f;line-height:1.5;}
 .infobox_content .indent_item_list{}
-.infobox_para{}
+.infobox_para{word-break: break-all;}
 
 .data_board_zone{}
 .data_sort_form_row{}
@@ -2052,7 +2054,7 @@ input.form_input{width:100%;box-sizing:border-box;color:#333;border:1px solid #e
 	.res45{}
 	.res40{margin-top:20px !important;}
 	.res20{margin-top:10px !important;}
-	.infobox_item_wrap{padding:30px 0 60px;}
+	.infobox_item_wrap{padding:30px 0 30px;}
 	.infobox_item{margin-bottom:20px;}
 	.infobox_title{margin-bottom:10px;font-size:16px;}
 	.infobox_content{padding:15px;border-top-width:2px;font-size:14px;}
@@ -2204,6 +2206,8 @@ input.form_input{width:100%;box-sizing:border-box;color:#333;border:1px solid #e
 	.indent_item_list.size_type3{font-size:13px;}
 	.indent_item_list.size_type4{font-size:12px;}
 
+	.indent_item_list .down_text{font-size:13px;}
+
 
 	.data_sort_form_g{display:block;}
 	.data_sort_form_g .btn_formsubmit{margin:5px 0 0 0;}
@@ -2228,6 +2232,7 @@ input.form_input{width:100%;box-sizing:border-box;color:#333;border:1px solid #e
 	.indent_emp_maintext{font-size:16px;padding-top:0;}
 	.data_toggle_cont{margin-top:10px;border-top:2px solid #f37321;padding:10px 15px;font-size:14px;}
 
+	.infobox_para br{display:none;}
 }
 
 /* popup */
