@@ -1039,6 +1039,8 @@ function maxHeight(item){
 var tailSwiperObj = null;
 function detailSwiper(){
 	const tail_thum = document.querySelectorAll(".tail_thum");
+	const tail_thum_li = document.querySelectorAll(".tail_thum_list > li");
+	const tail_thum_li_active = document.querySelectorAll(".tail_thum_list > li");
 	tailSwiperObj = new Swiper(".tail_swiper",{
 		speed : 800,
 		navigation : {
@@ -1046,18 +1048,54 @@ function detailSwiper(){
 			prevEl : '.tail_swiper_wrap .prev_navi', // 이번 버튼 클래스명
 		}
 	});
-
+	thumActive(tail_thum_li[tailSwiperObj.realIndex]);
+	tailSwiperObj.on("slideChange",()=>{
+		thumActive(tail_thum_li[tailSwiperObj.realIndex]);
+	});
 	tail_thum.forEach((element,index)=>{
 		element.addEventListener("click",(e)=>{
+			const thisEventThis = e.currentTarget;
+			const thisEventThisParent = thisEventThis.closest("li");
 			e.preventDefault();
 			tailSwiperObj.slideTo(index);
+			thumActive(thisEventThisParent);
 		});
 	})
+	function thumActive(item){
+		let itemObj = item;
+		let itemObjSibings = getSiblings(itemObj);
+		if(itemObj.length === 0){return;}
+		itemObjSibings.forEach((element,index)=>{
+			element.classList.remove("active");
+		});
+		itemObj.classList.add("active");
+	}
 }
+
+let getSiblings = function (e) {
+    // for collecting siblings
+    let siblings = []; 
+    // if no parent, return no sibling
+    if(!e.parentNode) {
+        return siblings;
+    }
+    // first child of the parent node
+    let sibling  = e.parentNode.firstChild;
+    
+    // collecting siblings
+    while (sibling) {
+        if (sibling.nodeType === 1 && sibling !== e) {
+            siblings.push(sibling);
+        }
+        sibling = sibling.nextSibling;
+    }
+    return siblings;
+};
 
 var detailSwiperObj = null;
 function detailPageSwiper(){
 	const detail_thum = document.querySelectorAll(".detail_thum");
+	const detail_thum_li = document.querySelectorAll(".detail_thum_list > li");
 	detailSwiperObj = new Swiper(".detail_swiper",{
 		speed : 800,
 		navigation : {
@@ -1065,13 +1103,28 @@ function detailPageSwiper(){
 			prevEl : '.detail_swiper_wrap .prev_navi', // 이번 버튼 클래스명
 		}
 	});
-
+	thumActive(detail_thum_li[detailSwiperObj.realIndex]);
+	detailSwiperObj.on("slideChange",()=>{
+		thumActive(detail_thum_li[detailSwiperObj.realIndex]);
+	});
 	detail_thum.forEach((element,index)=>{
 		element.addEventListener("click",(e)=>{
 			e.preventDefault();
+			const thisEventThis = e.currentTarget;
+			const thisEventThisParent = thisEventThis.closest("li");
 			detailSwiperObj.slideTo(index);
+			thumActive(thisEventThisParent);
 		});
 	});
+	function thumActive(item){
+		let itemObj = item;
+		let itemObjSibings = getSiblings(itemObj);
+		if(itemObj.length === 0){return;}
+		itemObjSibings.forEach((element,index)=>{
+			element.classList.remove("active");
+		});
+		itemObj.classList.add("active");
+	}
 }
 
 function toggleFunc(){
