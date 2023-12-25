@@ -960,8 +960,8 @@ function dimLayerShow(option){
 		}
 		function heightcheck(){
 			if(touchIs){
-				$("body").data("data-scr",$(window).scrollTop()).css({"margin-top":-$(window).scrollTop()}).append($target);
-				$("html").addClass("touchDis");
+				//$("body").data("data-scr",$(window).scrollTop()).css({"margin-top":-$(window).scrollTop()}).append($target);
+				$("html").addClass("touchDis2");
 			}
 		}
 		// var $windowWid = 0;
@@ -1007,7 +1007,7 @@ function dimLayerHide(option){
 		
 		function scrollEnd(){
 			if(touchIs){
-				$("body").css({"margin-top":0});
+				//$("body").css({"margin-top":0});
 				window.scrollTo(0,Number($("body").data("data-scr")));
 			}
 		}

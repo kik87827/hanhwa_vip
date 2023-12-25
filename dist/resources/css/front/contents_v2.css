@@ -1,0 +1,437 @@
+@charset "utf-8";
+
+
+/* component */
+.bullet_list{}
+.bullet_list > li{}
+.bullet_list > li:last-of-type{}
+.bullet_list.dash{}
+.bullet_list.dash > li{}
+.bullet_list.dash > li:last-of-type{}
+.bullet_list.dot{}
+.bullet_list.dot > li{}
+.bullet_list.dot > li:last-of-type{}
+
+.popup_wrap{}
+.bg_dim{}
+.popup_item{}
+.popup_title_row{}
+.popup_title{}
+.popup_title_logo{}
+.popup_contents_row{}
+.popup_contents_row.single_contents{}
+.btn_popup_close{}
+.btn_popup_close:before{}
+.btn_popup_close:after{}
+
+
+.guide_copy_wrap{}
+.guide_copy{}
+.data_table_wrap{}
+.data_table{}
+.data_table th,.data_table td{}
+.data_key_text{}
+.data_value_text{}
+.btn_grid_box_wrap{}
+.btn_grid_box{}
+.btn_grid_box_text{}
+.btn_grid_box.type2{}
+.btn_grid_box.type2 .btn_grid_box_text{}
+.btn_popup_bottom_wrap{}
+.btn_box_control{}
+.btn_popup_today_wrap{}
+.btn_popup_today_wrap .props_item{}
+.props_item{}
+input.props_form{}
+.props_label{}
+/* // component */
+
+/* sub */
+.middle_key_visual{}
+.middle_key_visual img{}
+.sub_both_block_wrap{}
+.sub_both_block{}
+.sub_both_block:last-of-type{}
+.sub_both_key_cols{}
+.sub_both_key{}
+.sub_both_key_sub_group{}
+.sub_both_key_sub{}
+.sub_both_key_sub strong{}
+.sub_both_key_sub:last-of-type{}
+.sub_both_value_cols{}
+.value_para{}
+.value_para strong{}
+.value_para_list{}
+.value_para_list strong{}
+.value_para_list > li{}
+.value_para_list > li:before{}
+.value_para_list > li:last-of-type{}
+
+.sb_copy_wrap{}
+.sb_main_copy{}
+.sb_sub_copy{}
+.sb_sub_copy *{}
+
+.import_text_list{}
+.import_text_list > li{}
+.import_text_list > li:last-of-type{}
+.import_text_list > li:before{}
+
+.list_block_wrap{}
+.list_block_item{}
+.list_block_item:last-of-type{}
+.list_block_title_row{}
+.list_block_title{}
+.list_block_contents{}
+.product_item_grid_list{}
+.product_item_grid_list > li{}
+.product_item_grid_list > li:last-of-type{}
+.product_item_grid_item{}
+.product_item_thum_row{}
+.product_item_thum_row img{}
+.history_item_btn_row{}
+.product_item_btn_row{}
+.btn_item_box{}
+.btn_item_box_text{}
+.btn_item_box.primary{}
+.btn_item_box.primary .btn_item_box_text{}
+.product_item_spec_row{}
+.product_item_spec{}
+
+.detail_copy_group{}
+.detail_copy_logo_row{}
+.detail_copy_logo{}
+.detail_copy_main_row{}
+.detail_copy_main{}
+.detail_copy_sub{}
+
+.detail_top_img_row{}
+.detail_top_img{}
+.detail_top_img img{}
+.detail_btn_wrap{}
+.detail_btn_group{}
+.detail_getdata_row{}
+.detail_getdata_row img{}
+
+.message_figure_both{}
+.message_figure_thum{}
+.message_figure_thum img{}
+.message_figure_spec{}
+.message_figure_spec.type2{}
+.message_figure_spec_para{}
+.message_figure_spec_para:last-of-type{}
+.message_figure_spec_block{}
+.message_figure_spec_para{}
+.btn_contents_box{}
+
+.step_guide_tb{}
+.step_guide_tr{}
+.step_guide_cols{}
+.step_guide_cols.define_th{}
+.step_guide_cols.define_td{}
+.step_key_item{}
+.step_key_num{}
+.step_key_part{}
+.step_key_text{}
+.step_guide_para{}
+
+.indent_item_list{}
+.indent_item_list > li{}
+.indent_item_list > li:last-of-type{}
+.indent_bullet{}
+.indent_text_g{}
+
+.indent_item_list.data_note_list{}
+.indent_item_list.data_note_list > li{}
+.indent_item_list.data_note_list > li:last-of-type{}
+.indent_item_list.data_note_list .indent_bullet{}
+.indent_item_list.data_note_list .indent_text_g{}
+
+.tail_value_both{}
+.tail_value_thum{}
+.tail_value_thum img{}
+.tail_value_spec{}
+.guide_tb_wrap{}
+.guide_tb{}
+.guide_tb th{}
+.guide_tb td{}
+.guide_tb td.type2{}
+.guide_thtext{}
+.guide_thtext_sub{}
+.define_key_text{}
+.define_value_text{}
+.guide_tdtext{}
+.ing_color{}
+
+.guide_emp_text{}
+.text_bullet_list{}
+.text_bullet_list > li{}
+.text_bullet_list > li:last-of-type{}
+.text_bullet_list > li:before{}
+.text_bullet_ico{}
+.text_bullet_cont{}
+
+
+.list_guide_data_tb_wrap{}
+.list_guide_data_tb{}
+.list_guide_data_tb .short_swid{}
+.list_guide_data_tb .short_swid2{}
+.list_guide_data_tb thead.type2 th{}
+.list_guide_data_tb th{}
+.list_guide_data_tb th.short_wid{}
+.list_guide_data_tb th.long_wid{}
+.list_guide_data_tb th{}
+.list_guide_data_tb th:last-of-type{}
+.list_guide_thtext{}
+.list_guide_data_tb td{}
+.list_guide_data_tb td.align_type2{}
+.list_guide_data_tb td.type2{}
+.list_guide_data_tb td:last-of-type{}
+.td_keylabel{}
+.list_guide_tdtext{}
+
+
+.prothum_item_wrap{}
+.prothum_item{}
+.prothum_img{}
+.prothum_img img{}
+.prothum_spec{}
+
+.indent_order_list{}
+.indent_order_list > li{}
+.indent_order_list > li:last-of-type{}
+.indent_order_bullet{}
+.indent_order_text_g{}
+
+.indent_order_list + .indent_item_list{}
+
+.docu_img_wrap{}
+.docu_img_wrap img{}
+
+.note_data_top_wrap{}
+.note_data_top_wrap .bullet_list{}
+.note_data_top_wrap .indent_item_list{}
+.detail_table_wrap{}
+.detail_table_wrap img{}
+
+.history_item_list_wrap{}
+.history_item_list{}
+.history_item_list > li{}
+.history_item_list > li:last-of-type{}
+
+.history_both_item{}
+.history_both_img_cols{}
+.history_both_img_cols img{}
+.history_both_spec_cols .guide_tb_wrap{}
+.history_both_spec_cols .guide_tb_wrap{}
+
+
+.filter_search_form{}
+.filter_search_cols{}
+.filter_item_wrap{}
+.filter_item_cols{}
+select.form_select{}
+.search_form_wrap{}
+.search_form_long_cols{}
+.search_form_long_cols input.form_input{}
+.search_form_btn_cols{}
+input.form_input{}
+.btn_filter_submit{}
+.btn_filter_submit.type2{}
+
+.respond_data_tb_wrap{}
+.respond_data_tb{}
+.respond_data_tb .long_wid{}
+.respond_data_tb .short_wid{}
+.respond_data_tb thead th{}
+.respond_data_tb thead th:last-of-type{}
+.respond_data_tb tbody td{}
+.respond_data_tb tbody td.type2{}
+.respond_data_tb tbody td:last-of-type{}
+.respond_thtext{}
+.respond_data_item{}
+.respond_data_item dt{}
+.respond_data_item dd{}
+.respond_data_key{}
+.respond_data_value{}
+
+
+.props_box_group{}
+.props_box{}
+.props_box_form{}
+.props_box_form_label{}
+.props_box_form:checked + .props_box_form_label{}
+.terms_tail_group{}
+.terms_tail_block{}
+.terms_tail_block:last-of-type{}
+.terms_tail_title{}
+.terms_local_contents{}
+.terms_local_contents > .bullet_list{}
+
+.form_block_wrap{}
+.form_block{}
+.form_block:last-of-type{}
+.form_block_title_row{}
+.form_block_title{}
+.form_block_title.emp{}
+.form_block_title_sub{}
+.form_block_title_sub .import_coment{}
+.form_block_contents{}
+.form_tb_wrap{}
+.form_tb{}
+.form_tb th{}
+.form_tb td{}
+.form_tb td .import_coment{}
+.form_label{}
+input.form_sm_input{}
+
+.inline_form_group{}
+.inline_form_cols{}
+.inline_form_cols .else_text{}
+.inline_form_cols.else{}
+input.form_sm_input{}
+.td_block_group{}
+.td_block{}
+.td_block:last-of-type{}
+.inline_form_group{}
+.inline_form_cols{}
+.inline_form_cols.else{}
+.inline_form_group.type2{}
+.inline_form_group.type2 .inline_form_cols{}
+
+.props_obj_group{}
+.props_obj{}
+.props_obj:last-of-type{}
+input.props_obj_form{}
+input.props_obj_form:checked + .props_obj_label{}
+.props_obj_label{}
+
+textarea.form_textarea{}
+
+.btn_popup_submit_wrap{}
+.btn_submit_box{}
+.submit_box_text{}
+.btn_submit_box.primary{}
+.btn_submit_box.primary .submit_box_text{}
+
+.render_data_list_wrap{}
+.render_data_list{}
+.render_data_list tr.event_tr{}
+.render_data_list tr.contents_tr{}
+.render_data_list tr.contents_tr .contents_cols{}
+.td_contents_wrap{}
+.render_data_list th{}
+.render_data_list th:last-of-type{}
+.render_data_list td{}
+.render_data_list td.bgtype2{}
+.render_data_list td:last-of-type{}
+.render_data_list .num_cols{}
+.render_data_list .primary_cols{}
+.render_data_list .else_data_cols{}
+.render_thtext{}
+.redner_priamry_text{}
+.render_tdtext{}
+.list_tditem{}
+.list_tditem.type2{}
+
+.midsec_copy_box{}
+
+.data_obj_item{}
+.data_obj_item:last-of-type{}
+.data_obj_key{}
+.data_obj_value{}
+.data_obj_value .indent_item_list{}
+.data_obj_value_para{}
+
+.design_order_list{}
+.design_order_list > li{}
+.design_order_list > li:last-of-type{}
+.d_order_pix{}
+.d_order_pix:after{}
+.d_order_num{}
+.d_order_liquid{}
+
+.form_sm_select{}
+.form_sm_select{}
+/* // sub */
+
+
+/* paging */
+
+/* pagination */
+.paging_wrap {margin-top:64px; display:flex;justify-content: center; align-items: center;gap:8px;}
+.paging_control,
+.paging_number{display: inline-flex;  align-items:center; justify-content:center; width: 40px;height: 40px;border:1px solid #ddd;border-radius:8px;background: #fff;font-size:12px;}
+.paging_number_group{display:flex;align-items: center;gap:8px;justify-content: center}
+
+.paging_number{color:#999; font-size:16px;
+}
+.paging_number.active,
+.paging_number:focus,.paging_number:hover{background:brown; color:#fff;font-family: 'Rubik Bold';border-color:brown}
+.paging_number.active{cursor: default;}
+
+.paging_control{
+    flex:0 0 40px;
+}
+.paging_control:before{display:block;content:'';width:15px;height:15px; background-repeat:no-repeat; background-size:100% auto; background-position:0 -15px;}
+.paging_control.first:before{background-image:url("../image/front/v2/ico_paging_first.png");}
+.paging_control.prev:before{background-image:url("../image/front/v2/ico_paging_prev.png");}
+.paging_control.next:before{background-image:url("../image/front/v2/ico_paging_next.png");}
+.paging_control.last:before{background-image:url("../image/front/v2/ico_paging_end.png");}
+
+.paging_control.disabled{
+    cursor: default;
+}
+.paging_control:before{background-position:0 0 !important;}
+.paging_control:focus,
+.paging_control:hover{
+}
+.paging_control:before{
+    background-position:0 100%
+}
+
+@media (max-width:1023px){
+    .paging_wrap {margin-top:30px; gap:5px;}
+    .paging_control,
+    .paging_number{width: 30px;height: 30px;}
+    .paging_number_group{gap:5px;}
+
+    .paging_number{font-size:13px;}
+
+    .paging_control{
+        flex-basis: 30px;
+    }
+}
+
+@media (max-width:767px){
+    .paging_wrap {gap:3px;}
+    .paging_control,
+    .paging_number{width: 22px;height: 22px;}
+    .paging_number_group{gap:3px;}
+
+    .paging_number{font-size:12px;}
+
+    .paging_control{
+        flex-basis: 22px;
+    }
+}
+/* // paging */
+
+
+/* main */
+.mc_wrap{}
+.mc_copy_group{}
+.mc_main_copy{}
+.mc_sub_copy{}
+.mc_sub_logo_img{}
+.mc_sub_copy_text{}
+
+.mc_box_wrap{}
+.mc_box_item{}
+.mc_box_bg{}
+.mc_box_bg img{}
+.mc_box_copy{}
+.mc_box_main{}
+.mc_box_sub{}
+.mc_box_sub2{}
+/* // main */

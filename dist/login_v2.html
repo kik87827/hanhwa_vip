@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>::::: 한화생명 VIP :::::</title>
+	<link href="/resources/css/front/reset_v2.css" rel="stylesheet">
+	<link href="/resources/css/front/swiper.min.css" rel="stylesheet">
+	<link href="/resources/css/front/layout_v2.css" rel="stylesheet">
+	<link href="/resources/css/front/contents_v2.css" rel="stylesheet">
+	<script src="/resources/js/front/jquery-1.11.1.min.js"></script>
+	<script src="/resources/js/front/swiper.min.js"></script>
+	<script src="/resources/js/front/hoverIntent.js"></script>
+	<script src="/resources/js/front/common_v2.js"></script>
+</head>
+
+<body class="front_body">
+	<div class="page_wrap global_form_wrap">
+		<div class="global_form_inner">
+			<div class="global_field_box">
+				<div class="global_field_legend_wrap">
+					<span class="img_login_logo"></span>
+					<span class="global_field_legend_text">VIP Members에 <br>오신 것을 환영합니다.</span>
+				</div>
+				<div class="global_field_tabmenu_list_wrap">
+					<ul class="global_field_tabmenu_list">
+						<li><a href="#field_cont_01" class="field_tabmenu active"><span class="field_tabmenu_text">개인VIP</span></a></li>
+						<li><a href="#field_cont_02" class="field_tabmenu"><span class="field_tabmenu_text">법인VIP</span></a></li>
+						<li><a href="#field_cont_03" class="field_tabmenu"><span class="field_tabmenu_text">지점</span></a></li>
+						<li><a href="#field_cont_04" class="field_tabmenu"><span class="field_tabmenu_text">FP</span></a></li>
+					</ul>
+				</div>
+				<div class="global_field_cont_wrap">
+					<div class="global_field_cont active" id="field_cont_01">
+						<ul class="field_block_item_list">
+							<li><input type="text" class="field_input" placeholder="VIP 번호"></li>
+							<li><input type="password" class="field_input" placeholder="비밀번호"></li>
+						</ul>
+						<div class="field_hit_item_wrap">
+							<span class="field_hit_item">아이디 : VIP번호</span>
+							<span class="field_hit_item">비밀번호 : 생년월일 </span>
+						</div>
+						<div class="btn_field_submit_wrap">
+							<a href="javascript:;" class="btn_field_submit">로그인</a>
+						</div>
+						<div class="field_else_menu_list_wrap">
+							<ul class="field_else_menu_list">
+								<li><a href="#" class="field_else_menu">VIP서비스 안내</a></li>
+								<li><a href="#" class="field_else_menu">VIP번호 조회하기</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="global_field_cont" id="field_cont_02">
+						<ul class="field_block_item_list">
+							<li><input type="text" class="field_input" placeholder="VIP 번호"></li>
+							<li><input type="password" class="field_input" placeholder="비밀번호"></li>
+						</ul>
+						<div class="field_hit_item_wrap">
+							<span class="field_hit_item">아이디 : VIP번호</span>
+							<span class="field_hit_item">비밀번호 : 사업자번호 뒤 5자리</span>
+						</div>
+						<div class="btn_field_submit_wrap">
+							<a href="javascript:;" class="btn_field_submit">로그인</a>
+						</div>
+						<div class="field_else_menu_list_wrap">
+							<ul class="field_else_menu_list">
+								<li><a href="#" class="field_else_menu">VIP서비스 안내</a></li>
+								<li><a href="#" class="field_else_menu">VIP번호 조회하기</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="global_field_cont" id="field_cont_03">
+						<ul class="field_block_item_list">
+							<li><input type="text" class="field_input" placeholder="HLI지점코드(5자리)"></li>
+							<li><input type="password" class="field_input" placeholder="비밀번호"></li>
+						</ul>
+						<div class="field_hit_item_wrap">
+							<span class="field_hit_item">아이디 : HLI지점번호(5자리)</span>
+							<span class="field_hit_item">비밀번호 : 지점번호</span>
+						</div>
+						<div class="btn_field_submit_wrap">
+							<a href="javascript:;" class="btn_field_submit">로그인</a>
+						</div>
+					</div>
+					<div class="global_field_cont" id="field_cont_04">
+						<ul class="field_block_item_list">
+							<li><input type="text" class="field_input" placeholder="FP사번"></li>
+							<li><input type="password" class="field_input" placeholder="비밀번호"></li>
+						</ul>
+						<div class="field_hit_item_wrap">
+							<span class="field_hit_item">아이디 : FP사번</span>
+							<span class="field_hit_item">비밀번호 : FP사번</span>
+						</div>
+						<div class="btn_field_submit_wrap">
+							<a href="javascript:;" class="btn_field_submit">로그인</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- popup -->
+		<div class="popup_wrap" id="number_hit_popup_wrap">
+			<div class="bg_dim"></div>
+			<div class="popup_item">
+				<div class="popup_title_row">
+					<h3 class="popup_title">VIP번호 조회(개인용)</h3>
+				</div>
+				<div class="popup_contents_row">
+					<div class="popup_contents_block">
+						<ul class="field_block_item_list">
+							<li><input type="text" class="field_input" placeholder="이름"></li>
+							<li><input type="password" class="field_input" placeholder="생년월일 6자리"></li>
+							<li><a href="javascript:;" class="btn_field_submit">확인</a></li>
+						</ul>
+					</div>
+					<div class="popup_contents_block">
+						<div class="note_item_wrap">
+							<div class="note_item">
+								<p class="note_item_main">VIP Members 혜택</p>
+								<p class="note_item_sub">
+									VIP 선정 시 감사서비스, 기본서비스, 제휴서비스 등 <br>
+									다양한 혜택을 등급별 차등하여 제공합니다.
+								</p>
+							</div>
+						</div>
+						<div class="note_contents_wrap">
+							<ul class="bullet_list dash">
+								<li>서비스 내용은 제도 변경, 제휴처 사정 등에 따라 변동될 수 있습니다.</li>
+								<li>이용기간 중 가입한 보험상품 전건 해지/혜약 시 VIP Members 서비스 이용이 제한될 수 있습니다.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<a href="javascript:;" class="btn_popup_close"><span class="hdtext">팝업 닫기</span></a>
+			</div>
+		</div>
+		<div class="popup_wrap" id="overview_popup_wrap">
+			<div class="bg_dim"></div>
+			<div class="popup_item">
+				<div class="popup_title_row">
+					<h3 class="popup_title">VIP Members 제도 안내</h3>
+				</div>
+				<div class="popup_contents_row">
+					<div class="note_item_wrap">
+						<div class="note_item">
+							<p class="note_item_main">VIP Members 란?</p>
+							<p class="note_item_sub">
+								한화생명이 대한민국 대표 생명보험사로 성장할 수 있도록 <br>함께해주신 VIP고객님만을 위하여 차별화된 우대서비스를 <br>준비하였습니다.
+							</p>
+						</div>
+						<div class="note_item">
+							<p class="note_item_main">선정기준</p>
+							<p class="note_item_sub">
+								한화생명과의 최근 10년 간 유지 중인 거래 실적(납입 보험료, <br>납입기간, 가입상품 등)에 의한 포인트순으로 선정합니다.
+							</p>
+						</div>
+						<div class="note_item">
+							<p class="note_item_main">선정 및 서비스 이용 기간</p>
+							<p class="note_item_sub">
+								VIP Members 선정은 매년 1회 자동으로 이루어지며, <br>VIP Members 기간은 선정 연도 1월 1일 ~ 12월 31일 까지입니다.
+							</p>
+						</div>
+						<div class="note_item">
+							<p class="note_item_main">VIP Members 혜택</p>
+							<p class="note_item_sub">
+								VIP 선정 시 감사서비스, 기본서비스, 제휴서비스 등 <br>다양한 혜택을 등급별 차등하여 제공합니다.
+							</p>
+						</div>
+					</div>
+					<div class="note_contents_wrap">
+						<ul class="bullet_list dash">
+							<li>서비스 내용은 제도 변경, 제휴처 사정 등에 따라 변동될 수 있습니다.</li>
+							<li>이용기간 중 가입한 보험상품 전건 해지/혜약 시 VIP Members 서비스 이용이 제한될 수 있습니다.</li>
+						</ul>
+					</div>
+				</div>
+				<a href="javascript:;" class="btn_popup_close"><span class="hdtext">팝업 닫기</span></a>
+			</div>
+		</div>
+		<!-- // popup -->
+	</div>
+</body>
+
+</html>
