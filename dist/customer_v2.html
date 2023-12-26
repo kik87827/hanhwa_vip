@@ -274,7 +274,7 @@
 		<!-- popup -->
 		<div class="popup_wrap" id="inquire_popup_wrap">
 			<div class="bg_dim"></div>
-			<div class="popup_item">
+			<div class="popup_item type2 size2">
 				<div class="popup_title_row">
 					<h3 class="popup_title">문의접수</h3>
 				</div>
@@ -315,6 +315,37 @@
 	</div>
 	<script>
 		gnbRock("[name='info_01']");
+		document.addEventListener("DOMContentLoaded", function() {
+			// 인스턴스 선언
+			let inquirePopup = new DesignPopup({
+				selector: "#inquire_popup_wrap",
+				beforeCallback() {
+
+				},
+				callback() {
+
+				},
+				closeCallback() {}
+			});
+
+			// 퍼블 확인용
+			let url = window.location.href.split('?')[1];
+			let url_2 = url !== undefined ? url.split('#')[0] : null;
+
+			window.addEventListener("DOMContentLoaded", () => {
+				if (url_2 === "popup") {
+					inquirePopup.popupShow(); // show
+				}
+			});
+
+			/* inquirePopup.popupShow(); // show
+			// designPopup.popupShow(); // hide
+
+			// event
+			document.querySelector("#btnCall").addEventListener("click",()=>{
+				inquirePopup.popupShow(); // show
+			}); */
+		});
 	</script>
 </body>
 
