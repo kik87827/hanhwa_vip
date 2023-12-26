@@ -1,6 +1,13 @@
 @charset "utf-8";
 
 
+/* layout */
+html:not(.touchmode) ::-webkit-scrollbar {width: 10px;}
+html:not(.touchmode) ::-webkit-scrollbar-thumb {background-color: #827567;border-radius: 10px;background-clip: padding-box;border: 2px solid transparent;}
+html:not(.touchmode) ::-webkit-scrollbar-track {background-color: transparent;border-radius: 10px;box-shadow: inset 0px 0px 5px transparent;}
+
+
+
 body {-webkit-print-color-adjust: exact !important;}
 .page_wrap{}
 
@@ -82,49 +89,43 @@ body {-webkit-print-color-adjust: exact !important;}
 
 .middle_section_contents{}
  
-.page_wrap.global_form_wrap{}
-.global_form_inner{}
-.global_field_box{}
-.global_field_legend_wrap{}
-.img_login_logo{}
-.global_field_legend_text{}
+.page_wrap.global_form_wrap{display:flex;align-items: center;min-height:100vh; justify-content: center;}
+.global_form_inner{width:100%;box-sizing: border-box;padding:60px 30px;}
+.global_field_box{border:1px solid #dadada; position:relative; max-width:542px; box-sizing: border-box; margin:0 auto; border-radius:10px;padding:100px 40px 80px;}
+.global_field_legend_wrap{text-align: center; position:absolute;top:0;left:0;transform: translateY(-50%);width:100%;}
+.global_field_legend{background:#fff; display:inline-block;padding:0 20px;}
+.img_login_logo{display:inline-block;width:100px;height:25px;background:url("../../image/front/v2/img_login_logo.png") no-repeat 0 0/100% auto;vertical-align: top; position:relative;top:4px;margin-right:5px;}
+.global_field_legend_text{word-break: keep-all; font-size:26px;color:#000000;display:inline;line-height:1.2;}
 .global_field_tabmenu_list_wrap{}
-.global_field_tabmenu_list{}
-.global_field_tabmenu_list > li{}
+.global_field_tabmenu_list{display:flex;justify-content: center;text-align: center;}
+.global_field_tabmenu_list > li{flex:1;}
 .global_field_tabmenu_list > li:last-of-type{}
-.field_tabmenu{}
-.field_tabmenu:after{}
-.field_tabmenu_text{}
+.field_tabmenu{display:flex; position:relative; align-items: center; justify-content:center; padding:20px 0;min-height:68px; box-sizing: border-box;}
+.field_tabmenu:after{display:block;content:'';position:absolute;bottom:0;left:0;width:100%;height:2px; background:#eaeaea;}
+.field_tabmenu_text{font-size:22px;color:#a3a3a3;line-height:1;}
 .field_tabmenu.active{}
-.field_tabmenu.active:after{}
-.field_tabmenu.active .field_tabmenu_text{}
-.global_field_cont_wrap{}
-.global_field_cont{}
-.global_field_cont.active{}
+.field_tabmenu.active:after{background-color:#332d29}
+.field_tabmenu.active .field_tabmenu_text{color:#332d29;font-weight:500;}
+.global_field_cont_wrap{margin-top:40px;}
+.global_field_cont{display:none;}
+.global_field_cont.active{display:block;}
 .field_block_item_list{}
-.field_block_item_list > li{}
-.field_block_item_list > li:last-of-type{}
-input.field_input{}
-.field_hit_item_wrap{}
-.field_hit_item_wrap:before{}
-.field_hit_item{}
-.field_hit_item:after{}
-.btn_field_submit_wrap{}
-.btn_field_submit{}
-.field_else_menu_list_wrap{}
+.field_block_item_list > li{margin-bottom:10px;}
+.field_block_item_list > li:last-of-type{margin-bottom:0;}
+input.field_input{background:#f8f8f8;height:70px;color:#332d29;line-height:1;border:0;width:100%;box-sizing: border-box; font-size:22px; font-weight:500;padding:0 20px; appearance: none; border-radius:5px; -webkit-border-radius:5px;}
+.field_hit_item_wrap{margin-top:20px;display:flex;gap:10px 20px; position:relative;padding-left:28px;}
+.field_hit_item_wrap:before{display:block;content:'';width:18px;height:18px; background:url("../../image/front/v2/ico_help_18.png") no-repeat 0 0/100% auto; position:absolute;top:2px;left:0;border-radius:100%;}
+.field_hit_item{font-size:18px; font-weight:500; color:#777777; position:relative; }
+.field_hit_item:after{display:block;content:''; width:2px;height:12px; background:#dcdcdc; position:absolute;top:5px;right:-11px;}
+.field_hit_item:last-of-type:after{display:none;}
+.btn_field_submit_wrap{margin-top:60px;}
+.btn_field_submit{display:flex;align-items: center; justify-content: center; min-height:70px; border-radius:7px; background:#4f3c2f; color:#fff; box-sizing: border-box; padding:15px; font-size:24px; font-weight:700;}
+.field_else_menu_list_wrap{margin-top:30px;}
 .field_else_menu_list{}
-.field_else_menu_list > li{}
-.field_else_menu_list > li:last-of-type{}
-.field_else_menu{}
-.field_else_menu:after{}
-
-.note_item_wrap{}
-.note_item{}
-.note_item_main{}
-.note_item_sub{}
-
-.note_contents_wrap{}
-.note_contents_wrap .bullet_list{}
+.field_else_menu_list > li{margin-bottom:15px;}
+.field_else_menu_list > li:last-of-type{margin-bottom:0;}
+.field_else_menu{font-size:18px;display:inline-block;color:#777777;line-height:1;padding:0 20px 0 0;position:relative;}
+.field_else_menu:after{display:block;content:'';width:8px;height:8px;border-right:2px solid #808080; border-top:2px solid #808080; transform: rotate(45deg); position:absolute;top:4px;right:3px;}
 
 
 
@@ -143,3 +144,30 @@ input.field_input{}
 .footer_address_item{}
 .footer_logo_item{}
 .footer_logo_item img{}
+
+@media (max-width:1023px){
+    
+    .global_form_inner{padding:40px 20px;}
+    .global_field_box{padding:50px 20px 50px;}
+    .global_field_legend{padding:0 10px;}
+    .img_login_logo{width:70px;height:18px;top:4px;}
+    .global_field_legend_text{font-size:18px;line-height:1.4;}
+    .field_tabmenu{ padding:10px 0;min-height:50px;}
+    .field_tabmenu_text{font-size:15px;}
+    .field_tabmenu.active{}
+    .global_field_cont_wrap{margin-top:20px;}
+    input.field_input{height:50px;font-size:15px;padding:0 15px;}
+    .field_hit_item_wrap{margin-top:10px;gap:10px 20px;padding-left:20px;}
+    .field_hit_item_wrap:before{width:14px;height:14px;top:1px;}
+    .field_hit_item{font-size:13px; }
+    .field_hit_item:after{width:1px;height:10px;top:3px;right:-11px;}
+    .field_hit_item:last-of-type:after{display:none;}
+    .btn_field_submit_wrap{margin-top:30px;}
+    .btn_field_submit{ min-height:50px; border-radius:5px; padding:10px; font-size:16px;}
+    .field_else_menu_list_wrap{margin-top:30px;}
+    .field_else_menu_list{}
+    .field_else_menu_list > li{margin-bottom:10px;}
+    .field_else_menu{font-size:14px;padding:0 15px 0 0;}
+    .field_else_menu:after{width:7px;height:7px;top:3px;right:3px;border-width:1px;}
+
+}

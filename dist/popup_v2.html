@@ -7,21 +7,21 @@
 	<meta name="format-detection" content="telephone=no" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<title>::::: 한화생명 VIP :::::</title>
-	<link href="/resources/css/front/reset_v2.css" rel="stylesheet">
-	<link href="/resources/css/front/swiper.min.css" rel="stylesheet">
-	<link href="/resources/css/front/layout_v2.css" rel="stylesheet">
-	<link href="/resources/css/front/contents_v2.css" rel="stylesheet">
-	<script src="/resources/js/front/jquery-1.11.1.min.js"></script>
-	<script src="/resources/js/front/swiper.min.js"></script>
-	<script src="/resources/js/front/hoverIntent.js"></script>
-	<script src="/resources/js/front/common_v2.js"></script>
+	<link href="./resources/css/front/reset_v2.css" rel="stylesheet">
+	<link href="./resources/css/front/swiper.min.css" rel="stylesheet">
+	<link href="./resources/css/front/layout_v2.css" rel="stylesheet">
+	<link href="./resources/css/front/contents_v2.css" rel="stylesheet">
+	<script src="./resources/js/front/jquery-1.11.1.min.js"></script>
+	<script src="./resources/js/front/swiper.min.js"></script>
+	<script src="./resources/js/front/hoverIntent.js"></script>
+	<script src="./resources/js/front/common_v2.js"></script>
 </head>
 
 <body class="front_body">
 	<div class="page_wrap">
-		<a href="#" class="btn_guide_box">팝업 호출</a>
+		<a href="#" class="btn_guide_box" id="btnCall">팝업 호출</a>
 		<!-- popup -->
-		<div class="popup_wrap" id="overview_popup_wrap">
+		<div class="popup_wrap" id="samplePopup">
 			<div class="bg_dim"></div>
 			<div class="popup_item">
 				<div class="popup_title_row">
@@ -34,6 +34,32 @@
 			</div>
 		</div>
 		<!-- // popup -->
+
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+				// 인스턴스 선언
+				let designPopup = new DesignPopup({
+					selector: "#samplePopup",
+					beforeCallback() {
+
+					},
+					callback() {
+
+					},
+					closeCallback() {}
+				});
+
+
+
+				designPopup.popupShow(); // show
+				// designPopup.popupShow(); // hide
+
+				// event
+				document.querySelector("#btnCall").addEventListener("click", () => {
+					designPopup.popupShow(); // show
+				});
+			});
+		</script>
 	</div>
 </body>
 

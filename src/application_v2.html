@@ -194,9 +194,9 @@
 				</div>
 			</section>
 			<!-- popup -->
-			<div class="popup_wrap" id="app_popup_wrap">
+			<div class="popup_wrap fulltype" id="app_popup_wrap">
 				<div class="bg_dim"></div>
-				<div class="popup_item">
+				<div class="popup_item type2 size2">
 					<div class="popup_title_row">
 						<h3 class="popup_title">김소연 고객님 선물신청</h3>
 					</div>
@@ -321,7 +321,7 @@
 												<td>
 													<div class="td_block_group">
 														<div class="td_block">
-															<div class="inline_form_group type2">
+															<div class="inline_form_group type2 auto_type">
 																<div class="inline_form_cols">
 																	<input type="text" class="form_sm_input" value="06673" data-pcwid="120" style="width:120px">
 																</div>
@@ -381,21 +381,21 @@
 											<tr>
 												<th><span class="form_label">연락처</span></th>
 												<td>
-													<div class="inline_form_group" data-pcwid="400" style="width:400px">
+													<div class="inline_form_group auto_type">
 														<div class="inline_form_cols">
-															<input type="text" class="form_sm_input" value="010">
+															<input type="text" class="form_sm_input" value="010" data-pcwid="120" style="width:120px">
 														</div>
 														<div class="inline_form_cols else">
 															<span class="else_text">-</span>
 														</div>
 														<div class="inline_form_cols">
-															<input type="text" class="form_sm_input" value="2936">
+															<input type="text" class="form_sm_input" value="2936" data-pcwid="120" style="width:120px">
 														</div>
 														<div class="inline_form_cols else">
 															<span class="else_text">-</span>
 														</div>
 														<div class="inline_form_cols">
-															<input type="text" class="form_sm_input" value="4737">
+															<input type="text" class="form_sm_input" value="4737" data-pcwid="120" style="width:120px">
 														</div>
 													</div>
 													<p class="import_coment">연락처가 변경된 경우 새로운 연락처를 입력해주세요.</p>
@@ -406,7 +406,7 @@
 												<td>
 													<div class="td_block_group">
 														<div class="td_block">
-															<div class="inline_form_group type2">
+															<div class="inline_form_group type2 auto_type">
 																<div class="inline_form_cols">
 																	<input type="text" class="form_sm_input" value="06673" data-pcwid="120" style="width:120px">
 																</div>
@@ -452,6 +452,30 @@
 		</div>
 		<script>
 			gnbRock("[name='info_01']");
+			document.addEventListener("DOMContentLoaded", function() {
+				// 인스턴스 선언
+				let appPopup = new DesignPopup({
+					selector: "#app_popup_wrap",
+					beforeCallback(){
+
+					},
+					callback(){
+
+					},
+					closeCallback(){
+					}
+				});
+				
+				// 퍼블 확인용
+				let url = window.location.href.split('?')[1];
+				let url_2 = url !== undefined ? url.split('#')[0] : null;
+
+				window.addEventListener("DOMContentLoaded",()=>{
+					if(url_2 === "popup"){
+						appPopup.popupShow(); // show
+					}
+				});
+			});
 		</script>
 	</body>
 </html>

@@ -7,14 +7,14 @@
 	<meta name="format-detection" content="telephone=no" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<title>::::: 한화생명 VIP :::::</title>
-	<link href="/resources/css/front/reset_v2.css" rel="stylesheet">
-	<link href="/resources/css/front/swiper.min.css" rel="stylesheet">
-	<link href="/resources/css/front/layout_v2.css" rel="stylesheet">
-	<link href="/resources/css/front/contents_v2.css" rel="stylesheet">
-	<script src="/resources/js/front/jquery-1.11.1.min.js"></script>
-	<script src="/resources/js/front/swiper.min.js"></script>
-	<script src="/resources/js/front/hoverIntent.js"></script>
-	<script src="/resources/js/front/common_v2.js"></script>
+	<link href="./resources/css/front/reset_v2.css" rel="stylesheet">
+	<link href="./resources/css/front/swiper.min.css" rel="stylesheet">
+	<link href="./resources/css/front/layout_v2.css" rel="stylesheet">
+	<link href="./resources/css/front/contents_v2.css" rel="stylesheet">
+	<script src="./resources/js/front/jquery-1.11.1.min.js"></script>
+	<script src="./resources/js/front/swiper.min.js"></script>
+	<script src="./resources/js/front/hoverIntent.js"></script>
+	<script src="./resources/js/front/common_v2.js"></script>
 </head>
 
 <body class="front_body">
@@ -22,8 +22,10 @@
 		<div class="global_form_inner">
 			<div class="global_field_box">
 				<div class="global_field_legend_wrap">
-					<span class="img_login_logo"></span>
-					<span class="global_field_legend_text">VIP Members에 <br>오신 것을 환영합니다.</span>
+					<div class="global_field_legend">
+						<span class="img_login_logo"></span>
+						<span class="global_field_legend_text">VIP Members에 <br>오신 것을 환영합니다.</span>
+					</div>
 				</div>
 				<div class="global_field_tabmenu_list_wrap">
 					<ul class="global_field_tabmenu_list">
@@ -48,8 +50,8 @@
 						</div>
 						<div class="field_else_menu_list_wrap">
 							<ul class="field_else_menu_list">
-								<li><a href="#" class="field_else_menu">VIP서비스 안내</a></li>
-								<li><a href="#" class="field_else_menu">VIP번호 조회하기</a></li>
+								<li><a href="javascript:;" name="vipinfo_call" class="field_else_menu">VIP서비스 안내</a></li>
+								<li><a href="javascript:;" id="vipnum_personal_call" class="field_else_menu">VIP번호 조회하기</a></li>
 							</ul>
 						</div>
 					</div>
@@ -67,8 +69,8 @@
 						</div>
 						<div class="field_else_menu_list_wrap">
 							<ul class="field_else_menu_list">
-								<li><a href="#" class="field_else_menu">VIP서비스 안내</a></li>
-								<li><a href="#" class="field_else_menu">VIP번호 조회하기</a></li>
+								<li><a href="javascript:;" name="vipinfo_call" class="field_else_menu">VIP서비스 안내</a></li>
+								<li><a href="javascript:;" id="vipnum_company_call" class="field_else_menu">VIP번호 조회하기</a></li>
 							</ul>
 						</div>
 					</div>
@@ -116,22 +118,23 @@
 							<li><a href="javascript:;" class="btn_field_submit">확인</a></li>
 						</ul>
 					</div>
+				</div>
+				<a href="javascript:;" class="btn_popup_close"><span class="hdtext">팝업 닫기</span></a>
+			</div>
+		</div>
+		<div class="popup_wrap" id="number_hit2_popup_wrap">
+			<div class="bg_dim"></div>
+			<div class="popup_item">
+				<div class="popup_title_row">
+					<h3 class="popup_title">VIP번호 조회(법인용)</h3>
+				</div>
+				<div class="popup_contents_row">
 					<div class="popup_contents_block">
-						<div class="note_item_wrap">
-							<div class="note_item">
-								<p class="note_item_main">VIP Members 혜택</p>
-								<p class="note_item_sub">
-									VIP 선정 시 감사서비스, 기본서비스, 제휴서비스 등 <br>
-									다양한 혜택을 등급별 차등하여 제공합니다.
-								</p>
-							</div>
-						</div>
-						<div class="note_contents_wrap">
-							<ul class="bullet_list dash">
-								<li>서비스 내용은 제도 변경, 제휴처 사정 등에 따라 변동될 수 있습니다.</li>
-								<li>이용기간 중 가입한 보험상품 전건 해지/혜약 시 VIP Members 서비스 이용이 제한될 수 있습니다.</li>
-							</ul>
-						</div>
+						<ul class="field_block_item_list">
+							<li><input type="text" class="field_input" placeholder="회사명"></li>
+							<li><input type="password" class="field_input" placeholder="사업자번호 뒤 5자리"></li>
+							<li><a href="javascript:;" class="btn_field_submit">확인</a></li>
+						</ul>
 					</div>
 				</div>
 				<a href="javascript:;" class="btn_popup_close"><span class="hdtext">팝업 닫기</span></a>
@@ -169,18 +172,95 @@
 								VIP 선정 시 감사서비스, 기본서비스, 제휴서비스 등 <br>다양한 혜택을 등급별 차등하여 제공합니다.
 							</p>
 						</div>
-					</div>
-					<div class="note_contents_wrap">
-						<ul class="bullet_list dash">
-							<li>서비스 내용은 제도 변경, 제휴처 사정 등에 따라 변동될 수 있습니다.</li>
-							<li>이용기간 중 가입한 보험상품 전건 해지/혜약 시 VIP Members 서비스 이용이 제한될 수 있습니다.</li>
-						</ul>
+						<div class="note_item">
+							<ul class="bullet_list dash">
+								<li>서비스 내용은 제도 변경, 제휴처 사정 등에 따라 변동될 수 있습니다.</li>
+								<li>이용기간 중 가입한 보험상품 전건 해지/혜약 시 VIP Members 서비스 이용이 제한될 수 있습니다.</li>
+							</ul>
+						</div>
 					</div>
 				</div>
 				<a href="javascript:;" class="btn_popup_close"><span class="hdtext">팝업 닫기</span></a>
 			</div>
 		</div>
 		<!-- // popup -->
+
+		<script>
+			$(function() {
+				// login tab
+				$(".field_tabmenu").on("click", function(e) {
+					e.preventDefault();
+					let thisItem = $(this);
+					let thisItemNot = thisItem.parents(".global_field_tabmenu_list").find(".field_tabmenu").filter(".active");
+					let thisTarget = $(thisItem.attr("href"));
+					let thisTargetNot = thisTarget.parents(".global_field_cont_wrap").find(".global_field_cont");
+					thisItemNot.removeClass("active");
+					$(this).addClass("active");
+					thisTargetNot.removeClass("active");
+					thisTarget.addClass("active");
+				});
+			});
+
+
+			// 인스턴스 선언
+			let overviewPopup = new DesignPopup({
+				selector: "#overview_popup_wrap",
+				beforeCallback() {
+
+				},
+				callback() {
+
+				},
+				closeCallback() {}
+			});
+			let numberPopup = new DesignPopup({
+				selector: "#number_hit_popup_wrap",
+				beforeCallback() {
+
+				},
+				callback() {
+
+				},
+				closeCallback() {}
+			});
+			let number2Popup = new DesignPopup({
+				selector: "#number_hit2_popup_wrap",
+				beforeCallback() {
+
+				},
+				callback() {
+
+				},
+				closeCallback() {}
+			});
+
+			// event
+			document.querySelectorAll("[name='vipinfo_call']").forEach((item) => {
+				item.addEventListener("click", () => {
+					overviewPopup.popupShow(); // show
+				});
+			});
+			document.querySelector("#vipnum_personal_call").addEventListener("click", () => {
+				numberPopup.popupShow(); // show
+			});
+			document.querySelector("#vipnum_company_call").addEventListener("click", () => {
+				number2Popup.popupShow(); // show
+			});
+
+			// 퍼블 확인용
+			let url = window.location.href.split('?')[1];
+			let url_2 = url !== undefined ? url.split('#')[0] : null;
+
+			window.addEventListener("DOMContentLoaded", () => {
+				if (url_2 === "popup") {
+					numberPopup.popupShow(); // show
+				} else if (url_2 === "popup2") {
+					number2Popup.popupShow(); // show
+				} else if (url_2 === "popup3") {
+					overviewPopup.popupShow(); // show
+				}
+			});
+		</script>
 	</div>
 </body>
 
