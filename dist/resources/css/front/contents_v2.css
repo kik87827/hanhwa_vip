@@ -14,6 +14,9 @@
 .bullet_list.dot > li{}
 .bullet_list.dot > li:last-of-type{}
 
+.bullet_list.gap_type2 > li{margin-bottom:27px;}
+.bullet_list.gap_type2 > li:last-of-type{margin-bottom:0;}
+
 
 
 .popup_contents_block{padding:30px 40px;border-bottom:2px solid #322d29;background:#fff;}
@@ -106,7 +109,7 @@ input.props_form:checked{background-position:0 100%; background-color:#322d29;}
 @media (max-width:1023px){
     .bullet_list{font-size:13px;letter-spacing: 0;}
     .bullet_list.dash > li{padding-left:10px;}
-
+    .bullet_list.gap_type2 > li{margin-bottom:16px;}
 
     .btn_guide_box{font-size:16px;padding:10px 20px;}
     
@@ -423,12 +426,24 @@ input.props_obj_form:checked{background-position: 0 100%;}
 textarea.form_textarea{box-sizing: border-box;height:80px;border:1px solid #f4eeea;width:100%;padding:15px;resize: none;font-size:18px; color:#322d29;}
 
 .btn_popup_submit_wrap{display:flex;align-items: center;gap:20px; justify-content: center; margin:40px auto 10px;max-width:700px;}
-.btn_submit_box{}
 .btn_submit_box{min-width:220px;display:flex;align-items: center; justify-content: center;  min-height:60px; border:1px solid #4f3c2f; background:#fff; border-radius:7px; font-weight:700;}
 
 .submit_box_text{font-size:22px;line-height:1; color:#4f3c2f;}
 .btn_submit_box.primary{border-color:#4f3c2f; background-color:#4f3c2f;}
 .btn_submit_box.primary .submit_box_text{color:#fff;}
+.btn_submit_box.secondary{border-color:#ee7100; background-color:#ee7100;}
+.btn_submit_box.secondary .submit_box_text{color:#fff;}
+.btn_submit_box.skin2{border-color:#827567; background-color:#827567;}
+.btn_submit_box.skin2 .submit_box_text{color:#fff;}
+
+.file_upload_wrap{}
+.file_upload_wrap > .indent_item_list{}
+.file_upload_form{}
+.file_upload_button{}
+.file_upload_text{}
+.file_upload_origin{}
+.file_upload_value{}
+
 
 .render_data_list_wrap{}
 .render_data_list{}
