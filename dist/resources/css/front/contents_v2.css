@@ -163,6 +163,7 @@ input.props_form:checked{background-position:0 100%; background-color:#322d29;}
 .sub_both_block{margin-bottom:40px;display:flex;}
 .sub_both_block:last-of-type{margin-bottom:0;}
 .sub_both_key_cols{flex:0 0 270px;box-sizing: border-box;padding:0 30px 0 0;border-right:1px solid #827567;}
+.sub_both_block_wrap.keysize2 .sub_both_key_cols{flex-basis: 280px;}
 .sub_both_key{font-size:28px;font-weight:700;color:#332d29;letter-spacing: -0.5px;}
 .sub_both_key_sub_group{}
 .sub_both_key_sub{font-size:24px;color:#827567;margin-top:17px;}
@@ -225,15 +226,15 @@ input.props_form:checked{background-position:0 100%; background-color:#322d29;}
 .detail_getdata_row img{}
 
 .message_figure_both{display:flex;gap:30px;margin-bottom:40px;}
-.message_figure_thum{}
+.message_figure_thum{flex:0 0 595px;}
 .message_figure_thum img{vertical-align: top;}
 .message_figure_spec{}
-.message_figure_spec.type2{}
+.message_figure_spec.type2{display:flex;flex-direction: column; justify-content: space-between;}
 .message_figure_spec_para{font-size:24px;color:#332d29;line-height:1.2; font-weight:700;margin-bottom:25px;}
 .message_figure_spec_para:last-of-type{margin-bottom:0;}
 .message_figure_spec_block{}
 .message_figure_spec_para{}
-.btn_contents_box{}
+.btn_contents_box{font-size:22px;color:#ffffff;font-weight:700;line-height:1;background:#827567; border-radius:5px;padding:19px 20px; display:inline-block;}
 
 .step_guide_tb{}
 .step_guide_tr{}
@@ -601,7 +602,7 @@ select.form_sm_select.full{width:100%;}
 
         
     .message_figure_both{gap:20px;flex-direction: column;}
-    .message_figure_thum{}
+    .message_figure_thum{flex:none;}
     .message_figure_thum img{width:100%;}
     .message_figure_spec{}
     .message_figure_spec.type2{}
@@ -625,6 +626,10 @@ select.form_sm_select.full{width:100%;}
     .indent_order_list{font-size:14px;}
 
     .indent_item_list{font-size:14px;}
+
+    .message_figure_spec_block{margin-bottom:10px;}
+    .message_figure_spec_block:last-of-type{margin-bottom:0;}
+    .btn_contents_box{padding:12px 20px;font-size:14px;}
 }
 @media (max-width:374px){
     .btn_item_box_text{font-size:11px;}

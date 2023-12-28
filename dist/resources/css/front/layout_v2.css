@@ -118,7 +118,8 @@ body {-webkit-print-color-adjust: exact !important;}
 .page_wrap.sub_wrap{}
 
 .bg_key_visual{height:370px; background:url("../../image/front/v2/bg_key_01.png") no-repeat 50% 50%/cover;position:absolute;top:0;left:0;width:100%;}
-.bg_key_visual.type3{background-image:url("../../image/front/v2/bg_key_03.png");}
+.bg_key_visual.type2{background-image:url("../../image/front/v2/bg_key_02.png");}
+.bg_key_visual.type4{background-image:url("../../image/front/v2/bg_key_04.png");}
 .middle_section.sub_middle{min-height:370px;position:relative;display:flex;flex-direction: column;}
 .middle_section > *:not(.bg_key_visual){position:relative;z-index:1;}
 .middle_section_box{background-color:#fff;max-width:1280px;margin:0 auto;width:100%;flex:1;margin-top:180px;padding:60px 30px 100px;box-sizing: border-box;}
