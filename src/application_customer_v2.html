@@ -378,7 +378,7 @@
 								</span>
 								<span class="file_upload_value">선택된 파일 없음</span>
 							</div>
-							<ul class="indent_item_list">
+							<ul class="indent_item_list gap_type2">
 								<li>
 									<span class="indent_bullet">*</span>
 									<span class="indent_text_g">이미지파일(png,jpg)만 저장 가능합니다.</span>
@@ -389,8 +389,8 @@
 								</li>
 							</ul>
 						</div>
-						<div class="btn_popup_submit_wrap">
-							<a href="#" class="btn_submit_box secondary"><span class="submit_box_text">파일저장</span></a>
+						<div class="btn_popup_submit_wrap type2">
+							<a href="#" class="btn_submit_box secondary close_trigger"><span class="submit_box_text">파일저장</span></a>
 						</div>
 					</div>
 					<a href="javascript:;" class="btn_popup_close"><span class="hdtext">팝업 닫기</span></a>
@@ -444,6 +444,16 @@
 					},
 					closeCallback(){
 					}
+				});
+
+				// 파일 업로드
+				document.querySelectorAll(".file_upload_form").forEach((item)=>{
+					let thisItemWrap = item;
+					let thisItemOrigin = thisItemWrap.querySelector(".file_upload_origin");
+					let thisItemValue = thisItemWrap.querySelector(".file_upload_value");
+					thisItemOrigin.addEventListener("change",(e)=>{
+						thisItemValue.textContent = e.currentTarget.value
+					})
 				});
 
 
