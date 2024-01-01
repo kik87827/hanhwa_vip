@@ -419,10 +419,10 @@ input.form_input{height:60px;line-height:1;width:100%;appearance: none;border:1p
 .respond_data_item dt{display:none;}
 .respond_data_item dd{}
 .respond_data_key{}
-.respond_data_value{font-size:18px;color:#827567;line-height:1;}
+.respond_data_value{font-size:18px;color:#827567;line-height:1.2;}
 
 
-.btn_data_control{font-size:18px;background:#827567; border-radius: 5px; display:inline-block;line-height:1;padding:10px 15px;color:#fff;white-space: nowrap;}
+.btn_data_control{font-size:18px;background:#827567; border-radius: 5px; display:inline-block;line-height:1;padding:10px 15px;color:#fff;white-space: nowrap;box-sizing: border-box; text-align: center; min-width:90px;}
 .btn_data_control.type2{background:#ee7100;}
 
 .props_box_group{display:flex;gap:25px;}
