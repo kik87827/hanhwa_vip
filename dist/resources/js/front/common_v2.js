@@ -491,4 +491,21 @@ function scrollDrag(target){
       });
     }
   }
+
+
+  function toggleTable(){
+    const event_tr = document.querySelectorAll("tr.event_tr");
+    if(!!event_tr){
+        event_tr.forEach((item)=>{
+            item.addEventListener("click",(e)=>{
+                e.preventDefault();
+                let thisItem = e.currentTarget;
+                let targetItem = thisItem.nextElementSibling;
+                if(!!targetItem){
+                    targetItem.classList.toggle("active");
+                }
+            });
+        });
+    }
+  }
   
