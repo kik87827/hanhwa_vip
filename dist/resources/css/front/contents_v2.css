@@ -2,6 +2,7 @@
 
 
 /* component */
+.pix_br{display:block !important;}
 .resmt_40{margin-top:40px !important;}
 .mb_br{display:none;}
 .bullet_list{font-size:16px;color:#827567;letter-spacing: -0.05px;}
@@ -352,7 +353,9 @@ input.props_form:checked{background-position:0 100%; background-color:#322d29;}
 .indent_order_list + .indent_item_list{}
 
 .docu_img_wrap{}
-.docu_img_wrap img{}
+.docu_img_wrap img{vertical-align: top;}
+
+.guide_bottom_wrap{margin-top:40px;}
 
 .note_data_top_wrap{font-size:22px;}
 .note_data_top_wrap .bullet_list{font-size:22px;}
@@ -391,6 +394,7 @@ select.form_select.full{width:100%;}
     select.form_select{
         font-size:14px !important; height: 45px; line-height:45px; padding:0 60px 0 15px;background-size:45px auto;
     }
+    .guide_bottom_wrap{margin-top:20px;}
 }
 
 
@@ -577,7 +581,9 @@ select.form_sm_select.full{width:100%;}
     .indent_item_list{font-size:16px;}
     .indent_item_list > li{display:flex;gap:3px;}
     .indent_item_list > li:last-of-type{}
-    .indent_bullet{white-space: normal;}
+    .indent_item_list.break_type > li{display:block;}
+    .indent_item_list.break_type .indent_bullet{white-space: normal;display:inline;}
+    .indent_item_list.break_type .indent_item{display:inline;}
     .indent_text_g{}
 
 
