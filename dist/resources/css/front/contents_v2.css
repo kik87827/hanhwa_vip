@@ -965,9 +965,11 @@ select.form_sm_select.full{width:100%;}
 .mc_box_copy{position:relative;padding:30px;}
 .mc_box_main{font-size:34px;color:#fff;font-weight:700;}
 .mc_box_sub,
-.mc_box_sub2{font-size:22px;color:#fff;}
+.mc_box_sub2{font-size:22px;color:#fff;display:block;}
 .mc_box_sub{margin-top:10px;}
 .mc_box_sub2{margin-top:5px;}
+.mc_box_sub:hover,
+.mc_box_sub2:hover{text-decoration: underline;}
 
 @media(max-width:1280px){
     .mc_wrap{background-size:cover;}
