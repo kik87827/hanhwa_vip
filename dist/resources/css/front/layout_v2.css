@@ -119,6 +119,7 @@ body {-webkit-print-color-adjust: exact !important;}
 
 .bg_key_visual{height:370px; background:url("../../image/front/v2/bg_key_01.png") no-repeat 50% 50%/cover;position:absolute;top:0;left:0;width:100%;}
 .bg_key_visual.type2{background-image:url("../../image/front/v2/bg_key_02.png");}
+.bg_key_visual.type3{background-image:url("../../image/front/v2/bg_key_03.png");}/* 20240109 추가 */
 .bg_key_visual.type4{background-image:url("../../image/front/v2/bg_key_04.png");}
 .middle_section.sub_middle{min-height:370px;position:relative;display:flex;flex-direction: column;}
 .middle_section > *:not(.bg_key_visual){position:relative;z-index:1;}
