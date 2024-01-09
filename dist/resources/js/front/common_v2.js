@@ -274,14 +274,16 @@ function layoutFunc(){
                 activeMenu();
             }
         });
-    })
-    header_section.addEventListener("mouseleave",()=>{
-        if(page_wrap.classList.contains("sub_wrap")){
-            subInActiveMenu();
-        }else{
-            inActiveMenu();
-        }
     });
+    if(!!header_section){
+        header_section.addEventListener("mouseleave",()=>{
+            if(page_wrap.classList.contains("sub_wrap")){
+                subInActiveMenu();
+            }else{
+                inActiveMenu();
+            }
+        });
+    }
 
     function activeMenu(){
         let arrayHeight = [];
