@@ -1,0 +1,37 @@
+@charset "utf-8";
+/* default */
+* {margin:0;padding:0;word-break:keep-all; -webkit-text-size-adjust: none; -moz-text-size-adjust: none; -o-text-size-adjust: none; -ms-text-size-adjust: none; text-size-adjust:none; -webkit-tap-highlight-color: rgba(255,255,255,0);}
+body { font-family:'돋움',Dotum,verdana,sans-serif;font-size:12px;}
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, a, address, em, img, strong, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, input, textarea, table, caption, tbody, tfoot, thead, tr, th, td, header, footer, nav, menu, section, article, aside, main, video {margin:0;padding:0;border:0;vertical-align:baseline;}
+header, footer, section, article, aside, nav, main, details, menu, figure, figcaption, video {display:block;}
+table {border-collapse:collapse;border-spacing:0;word-wrap:break-word;word-break:break-all;}
+table th, table td {text-align:center;vertical-align:middle;}
+ol, ul, li {list-style: none outside none;}
+a {text-decoration:none; color:#333}
+a:hover, a:visited {text-decoration:none;}
+button {cursor:pointer;border:none;font-family:'YoonDisplay740';}
+img {border:0 none;}
+form input, form select, form label, form img {vertical-align: middle;}
+fieldset {border: 0 none;}
+em, address {font-style: normal;}
+h1, h2, h3, h4, h5, h6 {font-weight:normal;}
+strong {font-weight:normal;}
+iframe {margin: 0; padding: 0;}
+audio,canvas,progress,video{display:inline-block;vertical-align:baseline;}
+input[type="text"], input[type="password"] {font-family:'YoonDisplay740';}
+input[type="text"],
+input[type="search"],
+input[type="tel"],
+input[type="number"],
+input[type="password"]{-webkit-appearance:none;border-radius:0}
+
+/* skip */
+.skip {position:fixed;top:0;left:0;width:100%;z-index:500;}
+.skip a {display:block;width:0;height:0;font-size:0;}
+.skip a:hover, .skip a:focus,.skip a:active {display:block;height:16px;width:100%;padding:16px 0;text-align:center;font-size:14px;color:#fff;background:#282a37;}
+
+/* common */
+.clearboth{clear:both; display:block; content:'';}
+.hidden {overflow:hidden;position:absolute;top:-9999px;left:-9999px;width:1px;height:0;font-size:1px;}
+.touchDis {touch-action: none;overflow:hidden;position:fixed;left:0;top:0;width:100%;height:100%;bottom:0;}
+.touchDis2{touch-action: none;overflow:hidden;position:relative;}
