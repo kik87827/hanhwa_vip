@@ -35,7 +35,8 @@
 					});
 				}
 				function event(){
-					$("#btn_listgo").on("click",function(){
+					$("#btn_listgo").on("click",function(e){
+						e.preventDefault();
 						$(".intro_wrap").fadeOut();
 						$("body").addClass("skin3");
 						setTimeout(function(){
