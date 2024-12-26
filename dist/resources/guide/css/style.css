@@ -17,15 +17,27 @@
 }
 html,body{background:#000;transition:.5s;}
 body.skin2{background:#000;}
-body.skin3{background:#9d7d6a;}
-body.skin4{background:#f2f1f1;}
+/* body.skin3{background:#9d7d6a;}
+body.skin4{background:#f2f1f1;} */
 .fpage_wrap{}
 .intro_wrap{display:flex;align-items:center;justify-content:center;position:fixed;top:0;left:0;width:100%;height:100%;box-sizing:border-box;z-index:10;background:#000;}
 .intro_wrap.bg_gold{background-color:#a47b67;}
 .intro_wrap.bg_white{background-color:#f5f6f7;}
-.intro_bg{display:inline-block;position:relative;height:100%;}
-.intro_bg img{width:auto;height:100%;max-width:100%;}
-.btn_opacity_go{position:absolute;top:75%;left:55.18518518518519%;width:24.07407407407407%;height:4.2156862745098%;display:block;}
+.intro_bg{display:inline-block;position:relative;height:100%; text-align: center;}
+.intro_bg img{width:auto;height:100%;max-width:100%; }
+.intro_item_group{max-width:500px;margin:0 auto;height:100%;display:flex; flex-direction: column;}
+.intro_item_group img{max-width:100%;}
+.intro_bottom_row{flex:1;background:url("../images/bg_intro_wave_2025.png") no-repeat 0 0/100% auto; display:flex; flex-direction: column; justify-content: flex-end;}
+
+.inb_grid{width:100%;display:flex; justify-content: space-between; align-items: center; box-sizing: border-box; padding:0 40px 75px;}
+.inb_gitem{}
+.inb_gitem.define_logo{}
+.inb_gitem.define_logo img{max-width:140px; vertical-align: middle;}
+.inb_gitem.define_btn{}
+.inb_gitem.define_btn .btn_listgo{display:inline-block;max-width:130px;}
+.inb_gitem.define_btn .btn_listgo img{vertical-align: middle;}
+
+.btn_opacity_go{position:absolute;top:88.23529411764706%;left:auto;right:9.25925925925926%;width:24.07407407407407%;height:4.2156862745098%;display:block; outline:1px solid red;}
 .int_left{position:absolute;top:0;left:0;height:100%;width:13.88888888888889%;background:#1d1c1b;}
 .int_left img{width:100%;}
 
@@ -38,16 +50,12 @@ body.skin4{background:#f2f1f1;}
 .int_copy01 img{width:60.64814814814815%;}
 .int_copy02 img{width:21.75925925925926%;}
 
-.list_tit{text-align:left;padding:57px 30px 54px;opacity:0;filter:alpha(opacity=0);transition:1s;top:-57px;position:relative;}
-.list_tit img{max-width:114px;}
-.link_list{padding:0 17px;}
+.list_tit{text-align:left;padding:16.667vw 30px 11.389vw;opacity:0;filter:alpha(opacity=0);transition:1s;top:-57px;position:relative;}
+.list_tit img{max-width:43.333vw;}
+.link_list{padding:0 30px;}
 .link_list > li{padding:0 0 20px;opacity:0;filter:alpha(opacity=0);transition:1s;position:relative;top:-30px;}
 .link_list > li:last-of-type{padding-bottom:0;}
-.link_item{display:block;position:relative;overflow:hidden; border-radius:14px; background:#fff;
-	box-shadow: 5px 4px 10px -1px rgba(0,0,0,0.2);
-	-webkit-box-shadow: 5px 4px 10px -1px rgba(0,0,0,0.2);
-	-moz-box-shadow: 5px 4px 10px -1px rgba(0,0,0,0.2);
-}
+.link_item{display:block;position:relative;overflow:hidden; background:#000; border:1px solid #a88370;}
 .link_item img{width:100%;vertical-align: top;}
 .listpage_w{opacity:0;filter:alpha(opacity=0);transition:1s;font-size:0;line-height:0;position:fixed;top:0;left:0;width:100%;height:100%;z-index:10;}
 .link_list > li:nth-of-type(1){-webkit-transition-delay:.3s;transition-delay:.3s;z-index:5;}
@@ -95,14 +103,27 @@ body.skin4{background:#f2f1f1;}
 .intro_logo_group{text-align: right;padding:25px 30px 30px 0;}
 .intro_logo_group img{width:88px;}
 
-.list_bottom_logo_wrap{text-align: center;padding:18px 0 43px;}
+.list_bottom_logo_wrap{padding:30px 30px 30px;}
 .list_bottom_logo_wrap img{vertical-align: top;width:92px;}
 
 
 @media (max-width:768px){
 	.intro_copy{width:83.333vw;}
-}
+	.intro_bg{width:100%;}
+	.intro_bg img{}
 
+	.inb_grid{padding:0 7.40740740740741% 10.87278106508876%;}
+	.inb_gitem.define_logo img{max-width:25.37vw;}
+	.inb_gitem.define_btn{}
+	.inb_gitem.define_btn .btn_listgo{max-width:24.074vw;}
+	.inb_gitem.define_btn .btn_listgo img{}
+}
+@media screen and (max-width: 768px) and (orientation: landscape) {
+	.intro_item_group{max-width:375px;}
+
+	.inb_gitem.define_logo img{max-width:70px;}
+	.inb_gitem.define_btn .btn_listgo{max-width:65px;}
+}
 @media (max-width:320px){
 	.btn_tailback{bottom:12%;}
 }

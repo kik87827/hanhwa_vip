@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title></title>
+		<link href="./css/reset.css" rel="stylesheet">
+		<link href="./css/style.css" rel="stylesheet">
+		<script src="js/jquery-1.11.0.min.js"></script>
+		<script src="js/iscroll.js"></script>
+		<script src="js/imagesLoaded.js"></script>
+		<script>
+			$(function(){
+				$("body,html").addClass("touchDis").on("touchmove",function(e){
+					e.preventDefault();
+				});
+				document.ontouchmove = function(e){ e.preventDefault(); };
+			});
+			$(window).on("load",function(){
+				animateUI();
+			});
+			
+			function animateUI(){
+				function init(){
+					$("body").imagesLoaded( function() {
+						$(".has_isc").each(function(){
+							( new Function($(this).attr("id")+" = new IScroll('#"+$(this).attr("id")+"',{ mouseWheel: true,preventDefault : false})") )();
+						});
+					});
+					$(window).on("resize",function(){
+						$(".has_isc").each(function(){
+							( new Function($(this).attr("id")+".refresh()") )();
+						});
+					});
+				}
+				function event(){
+					$("#btn_listgo").on("click",function(e){
+						e.preventDefault();
+						$(".intro_wrap").fadeOut();
+						$("body").addClass("skin2");
+						setTimeout(function(){
+							$("#listScene").addClass("complete");
+							$(".link_list > li").last().on("webkitTransitionEnd transitionend",function(){
+								listScene.refresh();
+							});
+						},100);
+					});
+					$("#linkitem01").on("click",function(){
+						$(".listpage_w").removeClass("complete");
+						$(".tail_img_w").not($("#tail01Scene")).removeClass("complete");
+						$("body").removeClass("skin2 skin3");
+						$(".btn_tailback").addClass("complete");
+						setTimeout(function(){
+							$("#tail01Scene").addClass("complete");
+							$("#tail01Scene .tail_img").last().on("webkitTransitionEnd transitionend",function(){
+								tail01Scene.refresh();
+							});
+						},100);
+					});
+					$("#linkitem02").on("click",function(){
+						$(".listpage_w").removeClass("complete");
+						$(".tail_img_w").not($("#tail02Scene")).removeClass("complete");
+						$("body").removeClass("skin2 skin3");
+						$(".btn_tailback").addClass("complete");
+						setTimeout(function(){
+							$("#tail02Scene").addClass("complete");
+							$("#tail02Scene .tail_img").last().on("webkitTransitionEnd transitionend",function(){
+								tail02Scene.refresh();
+							});
+						},100);
+					});
+					$("#linkitem03").on("click",function(){
+						$(".listpage_w").removeClass("complete");
+						$(".tail_img_w").not($("#tail03Scene")).removeClass("complete");
+						$("body").removeClass("skin2 skin3");
+						$(".btn_tailback").addClass("complete");
+						setTimeout(function(){
+							$("#tail03Scene").addClass("complete");
+							$("#tail03Scene .tail_img").last().on("webkitTransitionEnd transitionend",function(){
+								tail02Scene.refresh();
+							});
+						},100);
+					});
+					$(".btn_tailback").on("click",function(){
+						$(".tail_img_w").removeClass("complete");
+						$(this).removeClass("complete");
+						$("body").removeClass("skin3").addClass("skin2");
+						setTimeout(function(){
+							$(".listpage_w").addClass("complete");
+							$(".link_list > li").last().on("webkitTransitionEnd transitionend",function(){
+								listScene.refresh();
+								listScene.scrollTo(0,0,0);
+							});
+						},100);
+					});
+				}
+				init();
+				event();
+			}
+		</script>
+	</head>
+
+	<body class="touchDis">
+		<a href="javascript:;" class="btn_tailback"></a>
+		<div class="fpage_wrap">
+			<div class="tail_img_w has_isc" id="tail01Scene">
+				<div class="iscroll">
+					<div class="tail_img tail_fir">
+						<img src="images/tail_black01_01_01.png" alt="image">
+					</div>
+					<div class="tail_imglast_w">
+						<div class="tail_img"><img src="images/tail_black01_01_02.png" alt="image"></div>
+						<div class="tail_img"><img src="images/tail_black01_01_03.png" alt="image"></div>
+					</div>
+				</div>
+			</div>
+			<div class="tail_img_w has_isc" id="tail02Scene">
+				<div class="iscroll">
+					<div class="tail_img tail_fir">
+						<img src="images/tail_black01_02_01.png" alt="image">
+					</div>
+					<div class="tail_imglast_w">
+						<div class="tail_img"><img src="images/tail_black01_02_02.png" alt="image"></div>
+						<div class="tail_img"><img src="images/tail_black01_02_03.png" alt="image"></div>
+					</div>
+				</div>
+			</div>
+			<div class="tail_img_w has_isc" id="tail03Scene">
+				<div class="iscroll">
+					<div class="tail_img tail_fir">
+						<img src="images/tail_black01_03_01.png" alt="image">
+					</div>
+					<div class="tail_imglast_w">
+						<div class="tail_img"><img src="images/tail_black01_03_02.png" alt="image"></div>
+						<div class="tail_img"><img src="images/tail_black01_03_03.png" alt="image"></div>
+					</div>
+				</div>
+			</div>
+			<!-- -->
+			<div class="listpage_w has_isc" id="listScene">
+				<div class="iscroll">
+					<div class="list_tit"><img src="./images/list_tit_black01.png" alt="image"></div>
+					<ul class="link_list">
+						<li><a href="javascript:;" class="link_item" id="linkitem01"><img src="./images/list_item_black01_01.png" alt="image"></a></li>
+						<li><a href="javascript:;" class="link_item" id="linkitem02"><img src="./images/list_item_black01_02.png" alt="image"></a></li>
+						<li><a href="javascript:;" class="link_item" id="linkitem03"><img src="./images/list_item_black01_03.png" alt="image"></a></li>
+					</ul>
+					<div class="list_bottom_logo_wrap"><img src="./images/list_bottom_logo.png" alt="image"></div>
+				</div>
+			</div>
+			<!-- // -->
+		</div>
+		<div class="intro_wrap">
+			<div class="intro_bg">
+				<img src="./images/black1_main_2024.jpg" alt="">
+				<a href="#" class="btn_opacity_go" id="btn_listgo"></a>
+			</div>
+		</div>
+	</body>
+</html>
